@@ -7,13 +7,13 @@
     <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Start observe sms"
+            android:text="Начать считывание смс"
             android:id="@+id/button" android:layout_gravity="left|center_vertical" android:onClick="onClick"
             android:textStyle="bold"/>
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="51dp"
-            android:text="New Text"
-            android:id="@+id/textView1" android:layout_gravity="left|center_vertical"/>
+            android:id="@+id/textView1" android:layout_gravity="left|center_vertical"
+            android:text="Необходимо обновление."/>
 </LinearLayout>
 
