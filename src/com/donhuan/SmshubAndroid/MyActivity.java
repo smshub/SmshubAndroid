@@ -6,8 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MyActivity extends Activity {
-    public static final String EXAMPLE_TEST = "ЗСКБ 9876 11янв 13:02 оплата 500р, остаток 5200.50р";
-
+    public static final String EXAMPLE_TEST = "ЗСКБ 9876 11янв 13:02 оплата 500р, остаток 5200.50р.";
     TextView tvHello;
     /**
      * Called when the activity is first created.
@@ -18,23 +17,33 @@ public class MyActivity extends Activity {
         setContentView(R.layout.main);
 
         tvHello = (TextView) findViewById(R.id.textView1);
+
     }
 
     public void onClick(View v) {
-        String[] splitString = (EXAMPLE_TEST.split("\\s+"));
+//        double[] amounts = scanMessage(EXAMPLE_TEST);
+//
+//        String titleText = "Сумма оплаты: " + amounts[0] + "\n";
+//        titleText = titleText + "Сумма статка: " + amounts[1] + "\n";
+    }
+
+    public double[] scanMessage(String message) {
+        String[] splitString = (message.split("\\s+"));
         String oldWord = "";
-        String titleText = "";
+
+        double payment = 0;
+        double balance = 0;
+
         for (String word : splitString) {
             if (oldWord.equals("оплата")) {
-                titleText = titleText + "Сумма оплаты: " + readAmounts(word) + "\n";
+                payment = readAmounts(word);
             }
             if (oldWord.equals("остаток")) {
-                titleText = titleText + "Сумма остатка: " + readAmounts(word) + "\n";
+                balance = readAmounts(word);
             }
-            tvHello.setText(titleText);
             oldWord = word;
         }
-
+        return new double[]{payment, balance};
     }
 
     private double readAmounts(String str) {

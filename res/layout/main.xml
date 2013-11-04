@@ -2,17 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="fill_parent"
-              android:layout_height="fill_parent">
-    <Button
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Начать считывание смс"
-            android:id="@+id/button" android:layout_gravity="left|center_vertical" android:onClick="onClick"
-            android:textStyle="bold"/>
+              android:layout_height="fill_parent"
+        >
     <TextView
             android:layout_width="fill_parent"
             android:layout_height="51dp"
-            android:id="@+id/textView1" android:layout_gravity="left|center_vertical"
-            android:text="Необходимо обновление."/>
+            android:id="@+id/textView1"
+            android:text="Ожидание входящего сообщения..."/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Обработать тестовое сообщение"
+            android:id="@+id/button" android:layout_gravity="left|center_vertical" android:onClick="onClick"
+            android:textStyle="bold"/>
 </LinearLayout>
 
