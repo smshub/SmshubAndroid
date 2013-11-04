@@ -27,6 +27,7 @@ public class MyActivity extends Activity {
 //        titleText = titleText + "Сумма статка: " + amounts[1] + "\n";
     }
 
+
     public double[] scanMessage(String message) {
         String[] splitString = (message.split("\\s+"));
         String oldWord = "";
