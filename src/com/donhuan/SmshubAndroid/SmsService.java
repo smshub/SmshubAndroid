@@ -53,11 +53,11 @@ public class SmsService extends Service {
                     String titleText = "Сумма оплаты: " + amounts[0] + "\n";
                     titleText = titleText + "Сумма статка: " + amounts[1] + "\n";
                     //выдаем оповещение
-                    createInfoNotification("Smshub", "Smshub: " + addr, titleText, 101);
+                    createInfoNotification("Smshub", "Smshub: " + addr, titleText, 101, true);
                 } else {
                     //выдаем оповещение
                     String titleText = "Формат сообщения не соответствует известному";
-                    createInfoNotification("Smshub", "Smshub: ", titleText, 101);
+                    createInfoNotification("Smshub", "Smshub: ", titleText, 101, true);
                 }
             }
 
@@ -75,32 +75,40 @@ public class SmsService extends Service {
     @Override
     public void onDestroy() {
         Toast.makeText(this, "Smshub отключен", Toast.LENGTH_LONG).show();
-        createInfoNotification("Smshub", "Smshub отключен", "", 101);
+        createInfoNotification("Smshub", "Smshub", "экран отключен", 101, false);
     }
 
     @Override
     public void onStart(Intent intent, int startid) {
         Toast.makeText(this, "Smshub включен", Toast.LENGTH_LONG).show();
 
-        createInfoNotification("Smshub", "Smshub включен", "", 101);
+        createInfoNotification("Smshub", "Smshub", "экран включен", 101, true);
 
     }
 
-    public void createInfoNotification(String ticker, String content, String message, int id) {
+    public void createInfoNotification(String ticker, String content, String message, int id, boolean bool) {
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE); // Создаем экземпляр менеджера уведомлений
-        int icon = android.R.drawable.sym_action_email;
+        int icon;
+        if (bool) {
+            icon = R.drawable.image_on;
+        } else {
+            icon = R.drawable.image_off;
+        }
+
         CharSequence tickerText = ticker;
         CharSequence contentTitle = content;
         CharSequence contentText = message;
 
-        long when = System.currentTimeMillis(); // Выясним системное время
-        Notification notification = new Notification(icon, tickerText, when); // Создаем экземпляр уведомления, и передаем ему наши параметры
-        notification.flags = notification.flags | Notification.FLAG_ONGOING_EVENT;//Текущее уведомление
+        long when = System.currentTimeMillis();                                             // Выясним системное время
+        Notification notification = new Notification(icon, tickerText, when);               // Создаем экземпляр уведомления, и передаем ему наши параметры
+        notification.flags = notification.flags | Notification.FLAG_ONGOING_EVENT;          //Текущее уведомление
         Context context = getApplicationContext();
-        Intent notificationIntent = new Intent(this, MyActivity.class); // Создаем экземпляр Intent
-        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+
+        Intent intent = new Intent(this, MyActivity.class);                                 // Создаем экземпляр Intent
+
+        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, intent, 0);
         notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent); // Передаем в наше уведомление параметры вида при развернутой строке состояния
-        mNotificationManager.notify(id, notification); // И наконец показываем наше уведомление через менеджер передав его ID
+        mNotificationManager.notify(id, notification);                                      // И наконец показываем наше уведомление через менеджер передав его ID
     }
 
     private int equalsWords(String word) {
