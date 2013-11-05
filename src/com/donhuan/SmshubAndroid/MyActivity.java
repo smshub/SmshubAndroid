@@ -12,6 +12,11 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class MyActivity extends Activity implements OnCheckedChangeListener {
     public static final String EXAMPLE_TEST1 = "ЗСКБ 9876 11янв 13:02 оплата 500р, остаток 5200.50р.";
     public static final String EXAMPLE_TEST2 = "VISA 8339: 31.10.13 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
@@ -24,8 +29,33 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         toogleButton = (ToggleButton) findViewById(R.id.toggleButton1);
+        tvHello = (TextView) findViewById(R.id.textView1);
         toogleButton.setOnCheckedChangeListener(this);
     }
+
+    protected void onResume() {
+        super.onResume();
+        readSmsList();
+    }
+
+    private void readSmsList() {
+        try {
+            // открываем поток для чтения
+            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput("sms_file.txt")));
+            String str;
+            String text = "";
+            // читаем содержимое
+            while ((str = br.readLine()) != null) {
+                text += str + "\n";
+            }
+            tvHello.setText(text);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 
     protected void onPause() {
         super.onPause();
@@ -60,13 +90,13 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         CharSequence contentText = message;
 
 
-        long when = System.currentTimeMillis();                                                     // Выясним системное время
-        Notification notification = new Notification(icon, tickerText, when);                       // Создаем экземпляр уведомления, и передаем ему наши параметры
+        long when = System.currentTimeMillis();                                                     //Выясним системное время
+        Notification notification = new Notification(icon, tickerText, when);                       //Создаем экземпляр уведомления, и передаем ему наши параметры
         notification.flags = notification.flags | Notification.FLAG_ONGOING_EVENT;                  //Текущее уведомление
         Context context = getApplicationContext();
-        Intent notificationIntent = new Intent(this, MyActivity.class);                             // Создаем экземпляр Intent
+        Intent notificationIntent = new Intent(this, MyActivity.class);                             //Создаем экземпляр Intent
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
-        notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);         // Передаем в наше уведомление параметры вида при развернутой строке состояния
-        mNotificationManager.notify(id, notification);                                              // И наконец показываем наше уведомление через менеджер передав его ID
+        notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent);         //Передаем в наше уведомление параметры вида при развернутой строке состояния
+        mNotificationManager.notify(id, notification);                                              //И наконец показываем наше уведомление через менеджер передав его ID
     }
 }

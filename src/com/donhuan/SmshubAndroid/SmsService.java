@@ -13,6 +13,8 @@ import android.os.IBinder;
 import android.telephony.gsm.SmsMessage;
 import android.widget.Toast;
 
+import java.io.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dh
@@ -50,10 +52,16 @@ public class SmsService extends Service {
                 }
                 double[] amounts = scanMessage(str);
                 if (amounts[0] != -1 && amounts[1] != -1) {
-                    String titleText = "Сумма оплаты: " + amounts[0] + "\n";
-                    titleText = titleText + "Сумма статка: " + amounts[1] + "\n";
+                    long when = System.currentTimeMillis();                                             //системное время  !!!!!! Надо заменить на время из sms
+                    String titleText = "Отправитель: " + addr + "\n";
+                    titleText += "Дата:" + when + "\n";
+                    titleText += "      -сумма оплаты: " + amounts[0] + "\n";
+                    titleText += "      -сумма статка: " + amounts[1] + "\n\n";
+                    titleText += readSmsList();
                     //выдаем оповещение
-                    createInfoNotification("Smshub", "Smshub: " + addr, titleText, 101, true);
+                    writeSmsList(titleText);
+                    createInfoNotification("Smshub", "Smshub: " + addr, "Сообщение распознанно", 101, true);
+
                 } else {
                     //выдаем оповещение
                     String titleText = "Формат сообщения не соответствует известному";
@@ -63,6 +71,38 @@ public class SmsService extends Service {
 
         }
     };
+
+    private String readSmsList() {
+        String text = "";
+        try {
+            // открываем поток для чтения
+            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput("sms_file.txt")));
+            String str = "";
+
+            // читаем содержимое
+            while ((str = br.readLine()) != null) {
+                text += str + "\n";
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return text;
+    }
+
+    private void writeSmsList(String titleText) {
+        try {
+            // отрываем поток для записи
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput("sms_file.txt", MODE_PRIVATE)));
+            // пишем данные
+            bw.write(titleText);
+            // закрываем поток
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
 
 
     @Override
@@ -83,8 +123,8 @@ public class SmsService extends Service {
         Toast.makeText(this, "Smshub включен", Toast.LENGTH_LONG).show();
 
         createInfoNotification("Smshub", "Smshub", "экран включен", 101, true);
-
     }
+
 
     public void createInfoNotification(String ticker, String content, String message, int id, boolean bool) {
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE); // Создаем экземпляр менеджера уведомлений

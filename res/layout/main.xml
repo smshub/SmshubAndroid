@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="fill_parent"
-              android:layout_height="fill_parent"
-        >
-    <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="58dp"
-            android:id="@+id/textView1"
-            android:text="Здесь будет список распознанных sms..." android:layout_gravity="left|center_vertical"/>
+
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
     <ToggleButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/toggleButton1" android:textOff="Экран sms отключен"
-            android:textOn="Экран sms включен"/>
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton1" android:layout_gravity="left|center_vertical"
+            android:textOff="Экран sms включен" android:textOn="Экран sms включен"/>
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="Здесь будет список SMS"
+            android:id="@+id/textView1" android:layout_gravity="left|center_vertical"/>
 </LinearLayout>
-
