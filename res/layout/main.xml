@@ -8,12 +8,17 @@
             android:layout_width="fill_parent"
             android:layout_height="58dp"
             android:id="@+id/textView1"
-            android:text="Ожидание входящего сообщения..." android:layout_gravity="left|center_vertical"/>
+            android:text="Здесь будет список распознанных sms..." android:layout_gravity="left|center_vertical"/>
     <Button
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:text="Обработка ТЕСТОВОГО сообщения"
+            android:layout_height="wrap_content"
+            android:text="Включить экран sms"
             android:id="@+id/button" android:layout_gravity="left|center_vertical"
-            android:onClick="onClick" android:visibility="gone"/>
+            android:visibility="visible" android:onClick="startSer" android:singleLine="false"/>
+    <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Отключить экран sms"
+            android:id="@+id/button1" android:layout_gravity="left|center_vertical" android:onClick="stopSer"/>
 </LinearLayout>
 
