@@ -52,7 +52,7 @@ public class SmsService extends Service {
                 }
                 double[] amounts = scanMessage(str);
                 if (amounts[0] != -1 && amounts[1] != -1) {
-                    long when = System.currentTimeMillis();                                             //системное время  !!!!!! Надо заменить на время из sms
+                    long when = System.currentTimeMillis();                                             //системное время!!!!!! Надо заменить на время из sms
                     String titleText = "Отправитель: " + addr + "\n";
                     titleText += "Дата:" + when + "\n";
                     titleText += "      -сумма оплаты: " + amounts[0] + "\n";
@@ -77,7 +77,7 @@ public class SmsService extends Service {
         try {
             // открываем поток для чтения
             BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput("sms_file.txt")));
-            String str = "";
+            String str;
 
             // читаем содержимое
             while ((str = br.readLine()) != null) {
