@@ -25,8 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -35,7 +33,7 @@
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
     <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385204694643" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385200317455" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385206663904" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383584994157" ignored="false" />
@@ -113,7 +111,7 @@
       <file leaf-file-name="CommonFunctions.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="67" selection-start="908" selection-end="908" vertical-scroll-proportion="0.62222224">
+            <state line="20" column="125" selection-start="682" selection-end="682" vertical-scroll-proportion="0.5954466">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -239,7 +237,7 @@
     </ignored-problems>
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -250,48 +248,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SmshubAndroid" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
@@ -312,8 +269,8 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -353,19 +310,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -391,6 +335,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -557,7 +514,11 @@
       <created>1385200338874</created>
       <updated>1385200338874</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test merge remote">
+      <created>1385206668767</created>
+      <updated>1385206668767</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -584,8 +545,6 @@
     <frame x="-8" y="-8" width="1378" height="754" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1550152" sideWeight="0.64656615" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.64656615" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.77295494" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.8089097" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -601,8 +560,10 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11702128" sideWeight="0.64656615" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35343385" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35225376" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1550152" sideWeight="0.64656615" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32826748" sideWeight="0.64656615" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6705744" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -648,7 +609,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
+    <option name="LAST_COMMIT_MESSAGE" value="test merge remote" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -674,6 +635,7 @@
     <MESSAGE value="fix setings" />
     <MESSAGE value="Добавлено автоматическое сохранение распознанных sms в список." />
     <MESSAGE value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
+    <MESSAGE value="test merge remote" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -783,7 +745,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="67" selection-start="908" selection-end="908" vertical-scroll-proportion="0.62222224">
+        <state line="20" column="125" selection-start="682" selection-end="682" vertical-scroll-proportion="0.5954466">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
