@@ -50,7 +50,8 @@ public class SmsService extends Service {
                     str += msgs[i].getMessageBody();
                     str += "\n";
                 }
-                double[] amounts = scanMessage(str);
+                //double[] amounts = scanMessage(str);
+                double[] amounts = new double[2];
                 if (amounts[0] != -1 && amounts[1] != -1) {
                     long when = System.currentTimeMillis();                                             //системное время!!!!!! Надо заменить на время из sms
                     String titleText = "Отправитель: " + addr + "\n";
@@ -161,7 +162,7 @@ public class SmsService extends Service {
         return -1;
     }
 
-
+    //Сканируем сообщение
     public double[] scanMessage(String message) {
         String[] splitString = (message.split("\\s+"));
         String oldWord = "";
@@ -170,13 +171,18 @@ public class SmsService extends Service {
         double balance = -1;
 
         for (String word : splitString) {
-            if (equalsWords(oldWord) == 0) {
-                payment = readAmounts(word);
+            if(word.matches("[0-9][[.][0-9]]?]")){
+                System.out.println(word);
             }
-            if (equalsWords(oldWord) == 1) {
-                balance = readAmounts(word);
-            }
-            oldWord = word;
+
+//            if (equalsWords(oldWord) == 0) {
+//                payment = readAmounts(word);
+//            }
+//            if (equalsWords(oldWord) == 1) {
+//                balance = readAmounts(word);
+//            }
+//            oldWord = word;
+
         }
         return new double[]{payment, balance};
     }
