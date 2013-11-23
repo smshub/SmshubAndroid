@@ -23,7 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -32,7 +31,7 @@
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
     <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385204694643" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385207670408" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385207990874" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383584994157" ignored="false" />
@@ -556,7 +555,11 @@
       <created>1385207681183</created>
       <updated>1385207681183</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Исправлены опечатки при парсинге SMS">
+      <created>1385208025396</created>
+      <updated>1385208025396</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -588,7 +591,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5678392" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38569754" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3850085" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.493517" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32160804" sideWeight="0.45461914" order="7" side_tool="false" content_ui="tabs" />
@@ -597,7 +600,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28863636" sideWeight="0.64656615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28863636" sideWeight="0.6149915" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35225376" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1550152" sideWeight="0.64656615" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -651,7 +654,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалены неиспользуемые классы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлены опечатки при парсинге SMS" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -680,6 +683,7 @@
     <MESSAGE value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
     <MESSAGE value="test merge remote" />
     <MESSAGE value="Удалены неиспользуемые классы" />
+    <MESSAGE value="Исправлены опечатки при парсинге SMS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
