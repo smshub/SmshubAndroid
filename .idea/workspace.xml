@@ -25,24 +25,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385196766866" ignored="false" />
+    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385203959134" ignored="false" />
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
-    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385199291455" ignored="false" />
+    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385204694643" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385196242281" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385200317455" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383584994157" ignored="false" />
     <file path="/AuxiliaryFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383650296766" ignored="false" />
     <file path="/main.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383655159521" ignored="false" />
     <file path="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/R.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1384518731376" ignored="false" />
+    <file path="/CommonFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385205216454" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,11 +101,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="61" selection-start="2455" selection-end="5453" vertical-scroll-proportion="2.8333333">
+            <state line="59" column="35" selection-start="2061" selection-end="2061" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommonFunctions.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="67" selection-start="908" selection-end="908" vertical-scroll-proportion="0.62222224">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,7 +124,7 @@
       <file leaf-file-name="SmsService.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="165" column="49" selection-start="6484" selection-end="6529" vertical-scroll-proportion="0.0">
+            <state line="117" column="77" selection-start="4257" selection-end="4323" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,6 +159,11 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Don Huan" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -178,6 +194,7 @@
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
       </list>
     </option>
   </component>
@@ -222,7 +239,7 @@
     </ignored-problems>
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -233,7 +250,48 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SmshubAndroid" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="SDKs" />
@@ -495,7 +553,11 @@
       <created>1384518703039</created>
       <updated>1384518703039</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)">
+      <created>1385200338874</created>
+      <updated>1385200338874</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -538,8 +600,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11742424" sideWeight="0.6633166" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35343385" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11702128" sideWeight="0.64656615" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35343385" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6705744" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -586,7 +648,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено автоматическое сохранение распознанных sms в список." />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -611,6 +673,7 @@
     <MESSAGE value="Исправлен вывод текущего уведомления о работе приложения.&#10;Добавлены изображения, отражающие режим работы в &#10;текущем уведомлении." />
     <MESSAGE value="fix setings" />
     <MESSAGE value="Добавлено автоматическое сохранение распознанных sms в список." />
+    <MESSAGE value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -632,11 +695,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/android/content/ContextWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="35" selection-start="903" selection-end="903" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/Android/android-sdk/platforms/android-15/android.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="22" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" />
@@ -692,13 +750,6 @@
         <state line="994" column="0" selection-start="43513" selection-end="43513" vertical-scroll-proportion="0.6899696" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="165" column="49" selection-start="6484" selection-end="6529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="96" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
@@ -718,8 +769,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="61" selection-start="2455" selection-end="5453" vertical-scroll-proportion="2.8333333">
+        <state line="59" column="35" selection-start="2061" selection-end="2061" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="77" selection-start="4257" selection-end="4323" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="67" selection-start="908" selection-end="908" vertical-scroll-proportion="0.62222224">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
