@@ -114,10 +114,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
                 smsTexts[1] = word + "\tбанк\n";
                 list[0] = true;
             } else if (word.matches("\\d+.?") && !list[1]) {                                                                //Проверка на номер
-                smsTexts[1] += word + "\tомер\n";
+                smsTexts[1] += word + "\tномер\n";
                 list[1] = true;
             } else if (word.matches("\\d{1,2}(" + regexpMonth + "|(\\.)\\d{2}((\\.)\\d{2,4})?)") && !list[2]) {             //Проверка на дату формата 1       (слитного)
-                smsTexts[1] += word + "\ttдата\n";
+                smsTexts[1] += word + "\tдата\n";
                 list[2] = true;
             } else if (word.matches(regexpMonth) && splitString[i - 1].matches("\\d{1,2}") && !list[2]) {                   //Проверка на дату формата 2       (раздельного)
                 String yy = "";
