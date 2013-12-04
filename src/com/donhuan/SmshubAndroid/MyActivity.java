@@ -3,8 +3,10 @@ package com.donhuan.SmshubAndroid;
 import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -39,6 +41,8 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     }
 
+
+
     public void onClick3 (View v) {
 
         //---- Работа с базой данных
@@ -62,6 +66,34 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         // закрываем соединения с базой данных
         sqdb.close();
         sqh.close();
+    }
+
+    public void onClick4(View v) {
+        // Инициализируем наш класс-обёртку
+        DataBaseClass sqh = new DataBaseClass(this);
+
+        // База нам нужна для записи и чтения
+        SQLiteDatabase sqdb = sqh.getWritableDatabase();
+
+
+        Cursor cursor = sqdb.query(DataBaseClass.TABLE_NAME, new String[] {
+                DataBaseClass._ID, DataBaseClass.BANKNAME },
+                null, // The columns for the WHERE clause
+                null, // The values for the WHERE clause
+                null, // don't group the rows
+                null, // don't filter by row groups
+                null // The sort order
+        );
+        while (cursor.moveToNext()) {
+            // GET COLUMN INDICES + VALUES OF THOSE COLUMNS
+            int id = cursor.getInt(cursor.getColumnIndex(DataBaseClass._ID));
+            String name = cursor.getString(cursor
+                    .getColumnIndex(DataBaseClass.BANKNAME));
+            Log.i("LOG_TAG", "ROW " + id + " HAS NAME " + name);
+            Toast.makeText(this, name, Toast.LENGTH_LONG).show();
+        }
+        cursor.close();
+
     }
 
     protected void onResume() {

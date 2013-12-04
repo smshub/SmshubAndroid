@@ -33,9 +33,9 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385209192127" ignored="false" />
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
-    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386170815753" ignored="false" />
+    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386173729619" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386168405832" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386172195941" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383584994157" ignored="false" />
@@ -112,7 +112,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="44" selection-start="1591" selection-end="1591" vertical-scroll-proportion="-0.22305764">
+            <state line="92" column="37" selection-start="3389" selection-end="3389" vertical-scroll-proportion="0.7443609">
               <folding />
             </state>
           </provider>
@@ -202,8 +202,8 @@
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/DataBaseClass.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" />
-        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
+        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       </list>
     </option>
   </component>
@@ -596,7 +596,11 @@
       <created>1386168435884</created>
       <updated>1386168435884</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Добавлена возможность отправки данных в базу данных.">
+      <created>1386172208520</created>
+      <updated>1386172208520</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -629,7 +633,7 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.8089097" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5678392" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5672913" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3850085" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.493517" order="7" side_tool="false" content_ui="tabs" />
@@ -691,7 +695,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создание базы данных." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена возможность отправки данных в базу данных." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -722,6 +726,7 @@
     <MESSAGE value="Удалены неиспользуемые классы" />
     <MESSAGE value="Исправлены опечатки при парсинге SMS" />
     <MESSAGE value="Создание базы данных." />
+    <MESSAGE value="Добавлена возможность отправки данных в базу данных." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -842,19 +847,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/DataBaseClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="63" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="117" column="8" selection-start="4257" selection-end="4323" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/DataBaseClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="63" selection-start="1108" selection-end="1108" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,7 +875,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="44" selection-start="1591" selection-end="1591" vertical-scroll-proportion="-0.22305764">
+        <state line="92" column="37" selection-start="3389" selection-end="3389" vertical-scroll-proportion="0.7443609">
           <folding />
         </state>
       </provider>
