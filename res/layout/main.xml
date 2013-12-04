@@ -16,8 +16,6 @@
             android:layout_height="wrap_content"
             android:text="Test parse1"
             android:id="@+id/button" android:layout_gravity="right|center_vertical" android:onClick="onClick1"/>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Test parse2"
-            android:id="@+id/button1" android:layout_gravity="right|center_vertical" android:onClick="onClick2"/>
     <ListView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

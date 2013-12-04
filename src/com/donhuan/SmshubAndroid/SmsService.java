@@ -25,6 +25,7 @@ import java.io.*;
 public class SmsService extends Service {
     String[] basePayOfWords = {"оплата", "сумму"};
     String[] baseBalanceOfWords = {"остаток", "Доступно:", "доступно:", "доступно"};
+    CommonFunctions commonFunctions = new CommonFunctions();
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -46,40 +47,41 @@ public class SmsService extends Service {
 
                     msgs[i] = SmsMessage.createFromPdu((byte[]) pdus[i]);
                     addr = msgs[i].getOriginatingAddress();
-                    //str += " :";
                     str += msgs[i].getMessageBody();
                     str += "\n";
                 }
-                //double[] amounts = scanMessage(str);
-                double[] amounts = new double[2];
-                if (amounts[0] != -1 && amounts[1] != -1) {
-                    long when = System.currentTimeMillis();                                             //системное время!!!!!! Надо заменить на время из sms
-                    String titleText = "Отправитель: " + addr + "\n";
-                    titleText += "Дата:" + when + "\n";
-                    titleText += "      -сумма оплаты: " + amounts[0] + "\n";
-                    titleText += "      -сумма статка: " + amounts[1] + "\n\n";
-                    titleText += readSmsList();
-                    //выдаем оповещение
-                    writeSmsList(titleText);
-                    createInfoNotification("Smshub", "Smshub: " + addr, "Сообщение распознанно", 101, true);
+                String items[] = commonFunctions.scanMessage(str);                          // вызвращает вектор стрингов с распознанными значениями
 
-                } else {
-                    //выдаем оповещение
-                    String titleText = "Формат сообщения не соответствует известному";
-                    createInfoNotification("Smshub", "Smshub: ", titleText, 101, true);
+                if (items.length == 7) {
+                    String smsText = "";
+                    for (String item : items) smsText += item + "\n";
+                    writeFile(readFile("sms_texts.txt") + smsText, "sms_texts.txt");        //добавляем в файл!!!!!проверить!!!!!
+                    writeFile(readFile("sms_addrs.txt") + addr + "\n", "sms_addrs.txt");        //добавляем в файл!!!!!проверить!!!!!
                 }
             }
 
         }
     };
 
-    private String readSmsList() {
+    private void writeFile(String titleText, String filename) {
+        try {
+            // отрываем поток для записи
+            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput(filename, MODE_PRIVATE)));
+            // пишем данные
+            bw.write(titleText);
+            // закрываем поток
+            bw.close();
+        } catch (IOException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+    }
+
+    private String readFile(String filename) {
         String text = "";
         try {
             // открываем поток для чтения
-            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput("sms_file.txt")));
+            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput(filename)));
             String str;
-
             // читаем содержимое
             while ((str = br.readLine()) != null) {
                 text += str + "\n";
@@ -90,19 +92,6 @@ public class SmsService extends Service {
             e.printStackTrace();
         }
         return text;
-    }
-
-    private void writeSmsList(String titleText) {
-        try {
-            // отрываем поток для записи
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput("sms_file.txt", MODE_PRIVATE)));
-            // пишем данные
-            bw.write(titleText);
-            // закрываем поток
-            bw.close();
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
     }
 
 
@@ -151,52 +140,4 @@ public class SmsService extends Service {
         notification.setLatestEventInfo(context, contentTitle, contentText, contentIntent); // Передаем в наше уведомление параметры вида при развернутой строке состояния
         mNotificationManager.notify(id, notification);                                      // И наконец показываем наше уведомление через менеджер передав его ID
     }
-
-    private int equalsWords(String word) {
-        for (String str : basePayOfWords) {
-            if (str.equals(word)) return 0;
-        }
-        for (String str : baseBalanceOfWords) {
-            if (str.equals(word)) return 1;
-        }
-        return -1;
-    }
-
-    //Сканируем сообщение
-    public double[] scanMessage(String message) {
-        String[] splitString = (message.split("\\s+"));
-        String oldWord = "";
-
-        double payment = -1;
-        double balance = -1;
-
-        for (String word : splitString) {
-            if(word.matches("[0-9][[.][0-9]]?]")){
-                System.out.println(word);
-            }
-
-//            if (equalsWords(oldWord) == 0) {
-//                payment = readAmounts(word);
-//            }
-//            if (equalsWords(oldWord) == 1) {
-//                balance = readAmounts(word);
-//            }
-//            oldWord = word;
-
-        }
-        return new double[]{payment, balance};
-    }
-
-    private double readAmounts(String str) {
-        double mount = 0;
-        for (int i = str.length(); i > 0; i--) {
-            try {
-                mount = Double.parseDouble(str.substring(0, i));
-                return mount;
-            } catch (NumberFormatException ignore) {
-            }
-        }
-        return mount;
-    }
-
 }
