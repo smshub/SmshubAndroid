@@ -25,10 +25,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -37,7 +33,7 @@
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
     <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385657095284" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386167297913" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386167481884" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385654521253" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383584994157" ignored="false" />
@@ -105,7 +101,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="120" selection-start="3418" selection-end="3418" vertical-scroll-proportion="0.7120419">
+            <state line="85" column="120" selection-start="3418" selection-end="3418" vertical-scroll-proportion="1.196481">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#825#833#0" expanded="true" />
@@ -512,7 +508,11 @@
       <created>1384518703039</created>
       <updated>1384518703039</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Добавлено сохранение смс в файл.&#10;Добавлена загрузка смс из файла.&#10;Загрузка смс теперь в ListView.">
+      <created>1386167556851</created>
+      <updated>1386167556851</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -537,16 +537,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.77295494" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.8089097" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5678392" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38569754" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38525963" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.493517" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.319933" sideWeight="0.45461914" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3835846" sideWeight="0.67585087" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49675852" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
@@ -560,7 +561,6 @@
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6705744" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.319933" sideWeight="0.45461914" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -603,7 +603,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено автоматическое сохранение распознанных sms в список." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено сохранение смс в файл.&#10;Добавлена загрузка смс из файла.&#10;Загрузка смс теперь в ListView." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -628,6 +628,7 @@
     <MESSAGE value="Исправлен вывод текущего уведомления о работе приложения.&#10;Добавлены изображения, отражающие режим работы в &#10;текущем уведомлении." />
     <MESSAGE value="fix setings" />
     <MESSAGE value="Добавлено автоматическое сохранение распознанных sms в список." />
+    <MESSAGE value="Добавлено сохранение смс в файл.&#10;Добавлена загрузка смс из файла.&#10;Загрузка смс теперь в ListView." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -737,7 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="120" selection-start="3418" selection-end="3418" vertical-scroll-proportion="0.7120419">
+        <state line="85" column="120" selection-start="3418" selection-end="3418" vertical-scroll-proportion="1.196481">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#825#833#0" expanded="true" />
