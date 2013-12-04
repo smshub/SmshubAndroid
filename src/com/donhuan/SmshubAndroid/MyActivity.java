@@ -15,7 +15,6 @@ import java.io.*;
 public class MyActivity extends Activity implements OnCheckedChangeListener {
     public static final String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
     public static final String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500.00 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
-    CommonFunctions commonFunctions = new CommonFunctions();
 
     ListView smsListView;
     ToggleButton toogleButton;
@@ -80,10 +79,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     * */
     public void onClick1(View v) {
         scanTestMessage(EXAMPLE_TEST1);
-    }
-
-    public void onClick2(View v) {
-        scanTestMessage(EXAMPLE_TEST2);
     }
 
     private void scanTestMessage(String message) {

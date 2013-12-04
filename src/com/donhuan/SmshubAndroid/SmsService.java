@@ -23,8 +23,6 @@ import java.io.*;
  * To change this template use File | Settings | File Templates.
  */
 public class SmsService extends Service {
-    String[] basePayOfWords = {"оплата", "сумму"};
-    String[] baseBalanceOfWords = {"остаток", "Доступно:", "доступно:", "доступно"};
     CommonFunctions commonFunctions = new CommonFunctions();
 
     @Override
