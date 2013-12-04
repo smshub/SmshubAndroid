@@ -2,6 +2,7 @@ package com.donhuan.SmshubAndroid;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -13,8 +14,11 @@ import android.widget.ToggleButton;
 import java.io.*;
 
 public class MyActivity extends Activity implements OnCheckedChangeListener {
-    public static final String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
-    public static final String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
+    private static final String exMessages [] = new String[10];
+    String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
+    String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
+    String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Произведена покупка на сумму 2500.00 руб. в Карусель успешно. Доступно: 10500.00 руб.";
+    String EXAMPLE_TEST4 = "MasterCard 9999 24.11.2013 23:43 Совершена покупка на сумму 4500.00 руб. в Карусель успешно. Доступно: 1000.00 руб.";
 
     ListView smsListView;
     ToggleButton toogleButton;
@@ -27,6 +31,24 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         toogleButton = (ToggleButton) findViewById(R.id.toggleButton1);
         smsListView = (ListView) findViewById(R.id.listView);
         toogleButton.setOnCheckedChangeListener(this);
+
+        exMessages[1] = EXAMPLE_TEST1;
+        exMessages[2] = EXAMPLE_TEST2;
+        exMessages[3] = EXAMPLE_TEST3;
+        exMessages[4] = EXAMPLE_TEST4;
+
+
+        //---- Работа с базой данных
+
+        // Инициализируем наш класс-обёртку
+        DataBaseClass sqh = new DataBaseClass(this);
+
+        // База нам нужна для записи и чтения
+        SQLiteDatabase sqdb = sqh.getWritableDatabase();
+
+        // закрываем соединения с базой данных
+        sqdb.close();
+        sqh.close();
     }
 
     protected void onResume() {
@@ -82,8 +104,14 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     public void onClick2(View v) {
-        scanTestMessage(EXAMPLE_TEST2);
+        scanTestMessage(EXAMPLE_TEST4);
     }
+
+
+// Button-3
+    //public void onClick3(View v) {
+
+    //}
 
     private void scanTestMessage(String message) {
         String smsTexts[];                                                                                              //Список для записи в него сообщений
