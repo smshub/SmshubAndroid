@@ -14,18 +14,10 @@
     <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test parse1"
-            android:id="@+id/button" android:layout_gravity="right|center_vertical" android:onClick="onClick1"/>
-    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Test parse2"
-            android:id="@+id/button1" android:layout_gravity="right|center_vertical" android:onClick="onClick2"/>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test DB"
-            android:id="@+id/button2" android:layout_gravity="right|center_vertical" android:clickable="false"
-            android:onClick="OnClick3"/>
+            android:text="New Button"
+            android:id="@+id/button" android:layout_gravity="left|center_vertical" android:onClick="onClick3"/>
     <ListView
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:id="@+id/listView"/>
+            android:id="@+id/listView" android:layout_gravity="left|center_vertical"/>
 </LinearLayout>

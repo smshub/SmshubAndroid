@@ -1,20 +1,18 @@
 package com.donhuan.SmshubAndroid;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
+import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ListView;
-import android.widget.ToggleButton;
 
 import java.io.*;
 
 public class MyActivity extends Activity implements OnCheckedChangeListener {
-    private static final String exMessages [] = new String[10];
+    private static final String exMessages[] = new String[10];
     String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
     String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
     String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Произведена покупка на сумму 2500.00 руб. в Карусель успешно. Доступно: 10500.00 руб.";
@@ -38,6 +36,11 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         exMessages[4] = EXAMPLE_TEST4;
 
 
+
+    }
+
+    public void onClick3 (View v) {
+
         //---- Работа с базой данных
 
         // Инициализируем наш класс-обёртку
@@ -45,6 +48,16 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
         // База нам нужна для записи и чтения
         SQLiteDatabase sqdb = sqh.getWritableDatabase();
+
+
+        // Метод 1: INSERT через класс CONTENTVALUE
+        ContentValues cv = new ContentValues();
+
+        cv.put(DataBaseClass.BANKNAME, "Alpha");
+        // вызываем метод вставки
+        sqdb.insert(DataBaseClass.TABLE_NAME, DataBaseClass.BANKNAME, cv);
+
+        Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
 
         // закрываем соединения с базой данных
         sqdb.close();
@@ -92,19 +105,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             state = false;
             stopService(new Intent(this, SmsService.class));
         }
-    }
-
-    /*
-    * Поиск нужного формата с использованием регулярных выражений,
-    * но с условием того, что порядок входных данных строго фиксирован.
-    * Поэтому используются флаги.
-    * */
-    public void onClick1(View v) {
-        scanTestMessage(EXAMPLE_TEST1);
-    }
-
-    public void onClick2(View v) {
-        scanTestMessage(EXAMPLE_TEST4);
     }
 
 
