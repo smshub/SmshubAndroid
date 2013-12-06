@@ -30,9 +30,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmshubAndroid.iml" afterPath="$PROJECT_DIR$/SmshubAndroid.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <list id="625888eb-ea29-4fd1-9646-485a963c7fe3" name="New changelist" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
     </list>
     <ignored path="SmshubAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,8 +100,13 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="33" selection-start="994" selection-end="994" vertical-scroll-proportion="0.4641638" vertical-offset="0" max-vertical-offset="2465">
-              <folding />
+            <state line="40" column="0" selection-start="1528" selection-end="1528" vertical-scroll-proportion="-0.8412969" vertical-offset="1020" max-vertical-offset="2159">
+              <folding>
+                <element signature="e#825#833#0" expanded="true" />
+                <element signature="e#881#889#0" expanded="true" />
+                <element signature="e#2125#2503#0" expanded="true" />
+                <element signature="e#2496#2497#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -177,8 +183,8 @@
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/AuxiliaryFunctions.java" />
         <option value="$PROJECT_DIR$/res/layout/main.xml" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
-        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java" />
+        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       </list>
     </option>
   </component>
@@ -485,6 +491,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="" />
+      <changelist id="625888eb-ea29-4fd1-9646-485a963c7fe3" name="New changelist" comment="" />
       <created>1383423173656</created>
       <updated>1383423173656</updated>
     </task>
@@ -568,7 +575,11 @@
       <created>1386174661381</created>
       <updated>1386174661381</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Слияние ListView и Базы данных 2&#10;">
+      <created>1386327548848</created>
+      <updated>1386327548848</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -596,7 +607,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15490797" sideWeight="0.64656615" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7719298" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7712" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.64656615" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -614,7 +625,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1163142" sideWeight="0.64027536" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3584" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3568" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.8089097" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6705744" order="7" side_tool="false" content_ui="tabs" />
@@ -651,7 +662,8 @@
     <MESSAGE value="&quot;Toggle button&quot; перестаёт быть активным - проблеме решена.&#10;Алгоритм распознавания изменен (regexp, тестовый вариант).&#10;Добавлены две кнопки для тестирования алгоритма&#10;распознавания (regexp)" />
     <MESSAGE value="test merge remote" />
     <MESSAGE value="Добавлена возможность просмотра всех распарсенных сообщений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена возможность просмотра всех распарсенных сообщений" />
+    <MESSAGE value="Слияние ListView и Базы данных 2&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Слияние ListView и Базы данных 2&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -676,7 +688,12 @@
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="732" selection-end="732" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="2465">
-          <folding />
+          <folding>
+            <element signature="e#825#833#0" expanded="true" />
+            <element signature="e#881#889#0" expanded="true" />
+            <element signature="e#2125#2503#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,8 +802,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="33" selection-start="994" selection-end="994" vertical-scroll-proportion="0.4641638" vertical-offset="0" max-vertical-offset="2465">
-          <folding />
+        <state line="40" column="0" selection-start="1528" selection-end="1528" vertical-scroll-proportion="-0.8412969" vertical-offset="1020" max-vertical-offset="2159">
+          <folding>
+            <element signature="e#825#833#0" expanded="true" />
+            <element signature="e#881#889#0" expanded="true" />
+            <element signature="e#2125#2503#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
