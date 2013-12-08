@@ -26,16 +26,18 @@ public class DataBaseClass extends SQLiteOpenHelper  implements BaseColumns {
 
     //  Поля базы данных
     //public static final String UID = "_id";
-    public static final String BANKNAME = "bankname";
-    public static final String BankNum = "banknum";
-    public static final String StoreName = "storename";
-    public static final String Date = "date";
-    public static final String Time = "time";
-    public static final String SpendMon = "spendmon";
-    public static final String RestMon = "restmon";
+    public String BANKNAME = "bankname";
+    public String BANKNUM = "banknum";
+    public String STORENAME = "storename";
+    public String DATE = "date";
+    public String TIME = "time";
+    public String SPENDMON = "spendmon";
+    public String RESTMON = "restmon";
+
+    public  String[] mesFields = {BANKNAME, BANKNUM, STORENAME, DATE, TIME, SPENDMON, RESTMON};
 
 
-    private static final String SQL_CREATE_ENTRIES = "CREATE TABLE "
+    private final String SQL_CREATE_ENTRIES = "CREATE TABLE "
             + TABLE_NAME + " (" + DataBaseClass._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
             + BANKNAME + " VARCHAR(255));";
 
@@ -65,5 +67,9 @@ public class DataBaseClass extends SQLiteOpenHelper  implements BaseColumns {
         db.execSQL(SQL_DELETE_ENTRIES);
         // Создаём новый экземпляр таблицы
         onCreate(db);
+
+
+
+
     }
 }

@@ -49,22 +49,23 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
         // Инициализируем наш класс-обёртку
         DataBaseClass sqh = new DataBaseClass(this);
+        CommonFunctions.putInfoToDB(sqh, new String[]{"1", "2", "3", "4", "5", "6", "7"}) ;
 
         // База нам нужна для записи и чтения
-        SQLiteDatabase sqdb = sqh.getWritableDatabase();
+        //SQLiteDatabase sqdb = sqh.getWritableDatabase();
 
 
         // Метод 1: INSERT через класс CONTENTVALUE
-        ContentValues cv = new ContentValues();
+        //ContentValues cv = new ContentValues();
 
-        cv.put(DataBaseClass.BANKNAME, "Alpha");
+       // cv.put(DataBaseClass.BANKNAME, "Alpha");
         // вызываем метод вставки
-        sqdb.insert(DataBaseClass.TABLE_NAME, DataBaseClass.BANKNAME, cv);
+       // sqdb.insert(DataBaseClass.TABLE_NAME, DataBaseClass.BANKNAME, cv);
 
         Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
 
         // закрываем соединения с базой данных
-        sqdb.close();
+        //sqdb.close();
         sqh.close();
     }
 
@@ -77,7 +78,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
 
         Cursor cursor = sqdb.query(DataBaseClass.TABLE_NAME, new String[] {
-                DataBaseClass._ID, DataBaseClass.BANKNAME },
+                DataBaseClass._ID, sqh.BANKNAME },
                 null, // The columns for the WHERE clause
                 null, // The values for the WHERE clause
                 null, // don't group the rows
@@ -88,9 +89,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             // GET COLUMN INDICES + VALUES OF THOSE COLUMNS
             int id = cursor.getInt(cursor.getColumnIndex(DataBaseClass._ID));
             String name = cursor.getString(cursor
-                    .getColumnIndex(DataBaseClass.BANKNAME));
+                    .getColumnIndex(sqh.BANKNAME));
             Log.i("LOG_TAG", "ROW " + id + " HAS NAME " + name);
             Toast.makeText(this, name, Toast.LENGTH_LONG).show();
+           // System.out.println(name);
         }
         cursor.close();
 
