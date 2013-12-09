@@ -1,27 +1,40 @@
 package com.donhuan.SmshubAndroid;
 
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.net.Uri;
+import android.util.Log;
+
 public class CommonFunctions {
 
-//    public static void putInfoToDB ( DataBaseClass sqh,  String fields[] ) {
-//
-//        ContentValues cv = new ContentValues();
-//        sqh.BANKNAME = fields[0];
-//        sqh.BANKNUM = fields[1];
-//        sqh.STORENAME = fields[2];
-//        sqh.DATE = fields[3];
-//        sqh.TIME = fields[4];
-//        sqh.SPENDMON = fields[5];
-//        sqh.RESTMON = fields[6];
-//
-//        SQLiteDatabase sqdb = sqh.getWritableDatabase();
-//
-//        sqdb.insert(sqh.TABLE_NAME,sqh.BANKNAME, cv );
-//        sqdb.insert(sqh.TABLE_NAME, sqh.BANKNUM,  cv);
-//        sqdb.insert(sqh.TABLE_NAME, sqh.STORENAME, cv);
-//        sqdb.insert(sqh.TABLE_NAME, sqh.DATE,cv);
-//        sqdb.insert(sqh.TABLE_NAME, sqh.TIME, cv);
-//        sqdb.insert(sqh.TABLE_NAME, sqh.SPENDMON, cv);
-//        sqdb.insert(sqh.TABLE_NAME, sqh.RESTMON, cv);
-//    }
+    ContentResolver contentResolver;
+    Uri SMSBASE_URI;
+    String LOG_TAG = "CommonFunctions";
+
+
+    CommonFunctions (ContentResolver contentResolver, Uri SMSBASE_URI)
+    {
+        this.contentResolver = contentResolver;
+        this.SMSBASE_URI = SMSBASE_URI;
+    }
+
+
+    public void putInfoToDB (String BANKNAME, String BANKNUM, String STORENAME, String DATE, String TIME, String SPENDMON, String RESTMON)
+    {
+        SMSDataBaseProvider sqh = new SMSDataBaseProvider();
+        //---- Работа с базой данных
+        ContentValues cv = new ContentValues();
+        cv.put(SMSDataBaseProvider.BANKNAME, BANKNAME);
+        cv.put(SMSDataBaseProvider.BANKNUM, BANKNUM);
+        cv.put(SMSDataBaseProvider.STORENAME, STORENAME);
+        cv.put(SMSDataBaseProvider.DATE, DATE);
+        cv.put(SMSDataBaseProvider.TIME, TIME);
+        cv.put(SMSDataBaseProvider.SPENDMON, SPENDMON);
+        cv.put(SMSDataBaseProvider.RESTMON, RESTMON);
+        cv.put(SMSDataBaseProvider.ISINFIN, "0"); //было ли сообщение добавлено в финансисто
+
+        Uri newUri = contentResolver.insert(SMSBASE_URI, cv);
+        Log.d(LOG_TAG, "insert, result Uri : " + newUri.toString());
+  }
 
 }

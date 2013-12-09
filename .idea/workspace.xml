@@ -24,25 +24,28 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
+    <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="Добавил поле isinfin (Для того, что бы указывать, считано уже поле или нет)">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625027182" ignored="false" />
+    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386628987633" ignored="false" />
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
-    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625512727" ignored="false" />
+    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386628818322" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625914771" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386629733221" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386602577970" ignored="false" />
     <file path="/AuxiliaryFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383650296766" ignored="false" />
     <file path="/main.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383655159521" ignored="false" />
-    <file path="/CommonFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386424494948" ignored="false" />
+    <file path="/CommonFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386629655633" ignored="false" />
     <file path="/DataBaseClass.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386544982680" ignored="false" />
-    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/activity/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625010883" ignored="false" />
-    <file path="/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625010883" ignored="false" />
+    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/activity/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386628080524" ignored="false" />
+    <file path="/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386628080838" ignored="false" />
     <file path="/DummyFile.xpath" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386602336998" ignored="false" />
     <file path="D:/untitled4/res/layout/main.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603659455" ignored="false" />
     <file path="D:/untitled4/build.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603632129" ignored="false" />
@@ -53,8 +56,8 @@
     <file path="D:/untitled4/gen/com/example/untitled4/BuildConfig.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603637312" ignored="false" />
     <file path="D:/untitled4/.idea/misc.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603696449" ignored="false" />
     <file path="/SMSDataBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386617903022" ignored="false" />
-    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/db/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625002083" ignored="false" />
-    <file path="/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625000708" ignored="false" />
+    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/db/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386627774582" ignored="false" />
+    <file path="/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386627773207" ignored="false" />
     <file path="/SMSDataBaseProvider.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625394220" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,10 +124,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="22" selection-start="3720" selection-end="3720" vertical-scroll-proportion="-21.76">
+            <state line="44" column="0" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.36215335">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -132,10 +135,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMSDataBaseProvider.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CommonFunctions.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="28" selection-start="177" selection-end="192" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SMSDataBaseProvider.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="55" selection-start="456" selection-end="456" vertical-scroll-proportion="0.46195653">
+            <state line="30" column="31" selection-start="950" selection-end="957" vertical-scroll-proportion="-10.2">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,8 +212,8 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyContactsProvider.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBase.java" />
-        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
+        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       </list>
     </option>
@@ -344,11 +358,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SmshubAndroid/SmshubAndroid" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0146A07E01011013" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4.0.4" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="androidAVD" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -659,7 +673,11 @@
       <created>1386625917329</created>
       <updated>1386625917329</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Добавил поле isinfin (Для того, что бы указывать, считано уже поле или нет)">
+      <created>1386626115116</created>
+      <updated>1386626115116</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -684,7 +702,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15367483" sideWeight="0.88548756" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32405347" sideWeight="0.88548756" order="2" side_tool="false" content_ui="tabs" />
@@ -699,17 +717,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3850085" sideWeight="0.3184765" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850778" sideWeight="0.493517" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.493517" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31959912" sideWeight="0.45461914" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3835846" sideWeight="0.67585087" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.49675852" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3830735" sideWeight="0.67585087" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.49675852" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.10565635" sideWeight="0.6714922" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26057908" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16168623" sideWeight="0.73942095" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26057908" sideWeight="0.42868719" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.6705744" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -821,13 +839,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SmsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="117" column="77" selection-start="4257" selection-end="4323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="96" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0">
@@ -923,25 +934,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
+    <entry file="jar://$USER_HOME$/AppData/Local/Android/android-sdk/platforms/android-8/android.jar!/android/database/Cursor.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.4263323">
+        <state line="31" column="8" selection-start="505" selection-end="505" vertical-scroll-proportion="0.30253622">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="22" selection-start="3720" selection-end="3720" vertical-scroll-proportion="-21.76">
+        <state line="30" column="31" selection-start="950" selection-end="957" vertical-scroll-proportion="-10.2">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="55" selection-start="456" selection-end="456" vertical-scroll-proportion="0.46195653">
+        <state line="7" column="28" selection-start="177" selection-end="192" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="0" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.36215335">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

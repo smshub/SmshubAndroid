@@ -1,7 +1,6 @@
 package com.donhuan.SmshubAndroid;
 
 import android.app.Activity;
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
@@ -44,26 +43,16 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     //Send data button
     public void onClick3 (View v) {
 
-        SMSDataBaseProvider sqh = new SMSDataBaseProvider();
-        //---- Работа с базой данных
-        ContentValues cv = new ContentValues();
-        cv.put(SMSDataBaseProvider.BANKNAME, "bank");
-        cv.put(SMSDataBaseProvider.BANKNUM, "num");
-        cv.put(SMSDataBaseProvider.STORENAME, "store");
-        cv.put(SMSDataBaseProvider.DATE, "date");
-        cv.put(SMSDataBaseProvider.TIME, "time");
-        cv.put(SMSDataBaseProvider.SPENDMON, "smon");
-        cv.put(SMSDataBaseProvider.RESTMON, "rmon");
-        cv.put(SMSDataBaseProvider.ISINFIN, "0"); //было ли сообщение добавлено в финансисто
-
-        Uri newUri = getContentResolver().insert(SMSBASE_URI, cv);
-        Log.d(LOG_TAG, "insert, result Uri : " + newUri.toString());
+        CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(),SMSBASE_URI);
+        commonFunctions.putInfoToDB("bank","bank","store","date","time","smon","rmon");
 
         Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
     }
 
     public void onClick4(View v)
     {
+
+
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
         while (cursor.moveToNext()){
             int id = cursor.getInt(cursor.getColumnIndex(SMSDataBaseProvider.SMSDATA_ID));
