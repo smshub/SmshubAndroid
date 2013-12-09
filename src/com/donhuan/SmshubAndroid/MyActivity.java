@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +23,8 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     ListView smsListView;
     ToggleButton toogleButton;
     boolean state;
+    final Uri SMSBASE_URI = Uri.parse("content://com.donhuan.SmshubAndroid.SMSDataBaseProvider/smsdata");
+    final String LOG_TAG = "MyLogs";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -37,62 +39,44 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         exMessages[3] = EXAMPLE_TEST3;
         exMessages[4] = EXAMPLE_TEST4;
 
-
-
     }
 
-
-
+    //Send data button
     public void onClick3 (View v) {
 
+        SMSDataBaseProvider sqh = new SMSDataBaseProvider();
         //---- Работа с базой данных
+        ContentValues cv = new ContentValues();
+        cv.put(SMSDataBaseProvider.BANKNAME, "bank");
+        cv.put(SMSDataBaseProvider.BANKNUM, "num");
+        cv.put(SMSDataBaseProvider.STORENAME, "store");
+        cv.put(SMSDataBaseProvider.DATE, "date");
+        cv.put(SMSDataBaseProvider.TIME, "time");
+        cv.put(SMSDataBaseProvider.SPENDMON, "smon");
+        cv.put(SMSDataBaseProvider.RESTMON, "rmon");
 
-        // Инициализируем наш класс-обёртку
-        DataBaseClass sqh = new DataBaseClass(this);
-        CommonFunctions.putInfoToDB(sqh, new String[]{"1", "2", "3", "4", "5", "6", "7"}) ;
-
-        // База нам нужна для записи и чтения
-        //SQLiteDatabase sqdb = sqh.getWritableDatabase();
+        Uri newUri = getContentResolver().insert(SMSBASE_URI, cv);
+        Log.d(LOG_TAG, "insert, result Uri : " + newUri.toString());
 
 
-        // Метод 1: INSERT через класс CONTENTVALUE
-        //ContentValues cv = new ContentValues();
-
-       // cv.put(DataBaseClass.BANKNAME, "Alpha");
-        // вызываем метод вставки
-       // sqdb.insert(DataBaseClass.TABLE_NAME, DataBaseClass.BANKNAME, cv);
 
         Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
 
-        // закрываем соединения с базой данных
-        //sqdb.close();
-        sqh.close();
     }
 
-    public void onClick4(View v) {
-        // Инициализируем наш класс-обёртку
-        DataBaseClass sqh = new DataBaseClass(this);
-
-        // База нам нужна для записи и чтения
-        SQLiteDatabase sqdb = sqh.getWritableDatabase();
-
-
-        Cursor cursor = sqdb.query(DataBaseClass.TABLE_NAME, new String[] {
-                DataBaseClass._ID, sqh.BANKNAME },
-                null, // The columns for the WHERE clause
-                null, // The values for the WHERE clause
-                null, // don't group the rows
-                null, // don't filter by row groups
-                null // The sort order
-        );
-        while (cursor.moveToNext()) {
-            // GET COLUMN INDICES + VALUES OF THOSE COLUMNS
-            int id = cursor.getInt(cursor.getColumnIndex(DataBaseClass._ID));
-            String name = cursor.getString(cursor
-                    .getColumnIndex(sqh.BANKNAME));
-            Log.i("LOG_TAG", "ROW " + id + " HAS NAME " + name);
-            Toast.makeText(this, name, Toast.LENGTH_LONG).show();
-           // System.out.println(name);
+    public void onClick4(View v)
+    {
+        Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
+        while (cursor.moveToNext()){
+            int id = cursor.getInt(cursor.getColumnIndex(SMSDataBaseProvider.SMSDATA_ID));
+            String bankname = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
+            String banknum = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNUM));
+            String storename = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.STORENAME));
+            String date = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.DATE));
+            String time = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.TIME));
+            String spendmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.SPENDMON));
+            String restmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.RESTMON));
+            Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon);
         }
         cursor.close();
 
