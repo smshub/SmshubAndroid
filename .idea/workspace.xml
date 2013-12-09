@@ -24,25 +24,18 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
-      <change type="DELETED" beforePath="D:\univer\SmshubAndroid\src\com\donhuan\SmshubAndroid\DataBaseClass.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/Manifest.java" afterPath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/Manifest.java" />
+    <list default="true" id="773569f1-7a1a-4ca3-b472-29c33070de10" name="Default" comment="Хорошая база">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/R.java" afterPath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386577997822" ignored="false" />
+    <file path="/fragment.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625027182" ignored="false" />
     <file path="$PROJECT_DIR$/res/values/ids.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383424891961" ignored="false" />
-    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386619497149" ignored="false" />
+    <file path="/MyActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625512727" ignored="false" />
     <file path="/a.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383426886084" ignored="false" />
-    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386616201798" ignored="false" />
+    <file path="/Dummy.txt" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386619716038" ignored="false" />
     <file path="/SmsReceiver.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383574864952" ignored="false" />
     <file path="/SmsService.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1385070869881" ignored="false" />
     <file path="/AndroidManifest.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386602577970" ignored="false" />
@@ -50,8 +43,8 @@
     <file path="/main.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1383655159521" ignored="false" />
     <file path="/CommonFunctions.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386424494948" ignored="false" />
     <file path="/DataBaseClass.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386544982680" ignored="false" />
-    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/activity/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386544234980" ignored="false" />
-    <file path="/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386544121321" ignored="false" />
+    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/activity/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625010883" ignored="false" />
+    <file path="/MainActivity.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625010883" ignored="false" />
     <file path="/DummyFile.xpath" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386602336998" ignored="false" />
     <file path="D:/untitled4/res/layout/main.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603659455" ignored="false" />
     <file path="D:/untitled4/build.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603632129" ignored="false" />
@@ -62,6 +55,9 @@
     <file path="D:/untitled4/gen/com/example/untitled4/BuildConfig.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603637312" ignored="false" />
     <file path="D:/untitled4/.idea/misc.xml" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386603696449" ignored="false" />
     <file path="/SMSDataBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386617903022" ignored="false" />
+    <file path="$PROJECT_DIR$/../financisto/src/ru/orangesoftware/financisto/db/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625002083" ignored="false" />
+    <file path="/ReadFromSMSBase.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625000708" ignored="false" />
+    <file path="/SMSDataBaseProvider.java" changelist="773569f1-7a1a-4ca3-b472-29c33070de10" time="1386625394220" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,28 +123,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="2" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.4263323">
-              <folding />
+            <state line="77" column="22" selection-start="3720" selection-end="3720" vertical-scroll-proportion="-21.76">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonFunctions.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMSDataBaseProvider.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="SMSDataBaseProvider.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="34" selection-start="595" selection-end="605" vertical-scroll-proportion="-14.96">
+            <state line="24" column="30" selection-start="692" selection-end="692" vertical-scroll-proportion="0.66557914">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -211,8 +200,8 @@
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyContactsProvider.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBase.java" />
-        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
+        <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java" />
         <option value="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       </list>
     </option>
@@ -357,11 +346,11 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/SmshubAndroid/SmshubAndroid" />
     <property name="AndroidLayoutSelectedEditor" value="android-designer" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df178ec7de3af55" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="0146A07E01011013" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="test3" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="4.0.4" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
@@ -506,8 +495,8 @@
       <option name="ACTIVITY_CLASS" value="com.donhuan.SmshubAndroid.MyActivity" />
       <option name="MODE" value="specific_activity" />
       <option name="DEPLOY" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="PREFERRED_AVD" value="4.0.4" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
       <option name="USE_COMMAND_LINE" value="true" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
@@ -660,7 +649,11 @@
       <created>1386523578631</created>
       <updated>1386523578631</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Хорошая база">
+      <created>1386619684067</created>
+      <updated>1386619684067</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TodoView" selected-index="3">
@@ -689,7 +682,7 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15367483" sideWeight="0.88548756" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32405347" sideWeight="0.88548756" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18151447" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36636972" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.8089097" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32293987" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -760,7 +753,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit для тестирования базы данных на телефоне." />
+    <option name="LAST_COMMIT_MESSAGE" value="Хорошая база" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -795,6 +788,7 @@
     <MESSAGE value="Добавлена возможность чтения  данных из базы данных." />
     <MESSAGE value="Функция записи в базу данных клвсса CommonFunctions." />
     <MESSAGE value="Commit для тестирования базы данных на телефоне." />
+    <MESSAGE value="Хорошая база" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -847,7 +841,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="59" column="35" selection-start="2061" selection-end="2061" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -913,26 +909,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
+        <state line="22" column="66" selection-start="890" selection-end="890" vertical-scroll-proportion="0.5712">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="34" selection-start="595" selection-end="605" vertical-scroll-proportion="-14.96">
+        <state line="16" column="39" selection-start="507" selection-end="507" vertical-scroll-proportion="0.4263323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="22" selection-start="3720" selection-end="3720" vertical-scroll-proportion="-21.76">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/SMSDataBaseProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="2" selection-start="2694" selection-end="2694" vertical-scroll-proportion="0.4263323">
-          <folding />
+        <state line="24" column="30" selection-start="692" selection-end="692" vertical-scroll-proportion="0.66557914">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

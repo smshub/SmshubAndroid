@@ -28,13 +28,14 @@ public class SMSDataBaseProvider extends ContentProvider {
     static final String TIME = "time";
     static final String SPENDMON = "spendmon";
     static final String RESTMON = "restmon";
+    static final String ISINFIN = "isinfin";//было ли сообщение добавлено в финансисто
 
     // Скрипт создания таблицы
     static final String DB_CREATE = "create table " + TABLE_NAME + "("
             + SMSDATA_ID + " integer primary key autoincrement, "
             + BANKNAME + " text, " + BANKNUM + " text, " + STORENAME
             + " text, " + DATE + " text, " + TIME + " text, " + SPENDMON
-            + " text, " + RESTMON + " text" + ");";
+            + " text, " + RESTMON + " text, " + ISINFIN +" text" + ");";
 
     // // Uri
     // authority

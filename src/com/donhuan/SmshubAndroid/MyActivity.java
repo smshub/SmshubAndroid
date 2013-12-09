@@ -54,14 +54,12 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         cv.put(SMSDataBaseProvider.TIME, "time");
         cv.put(SMSDataBaseProvider.SPENDMON, "smon");
         cv.put(SMSDataBaseProvider.RESTMON, "rmon");
+        cv.put(SMSDataBaseProvider.ISINFIN, "0"); //было ли сообщение добавлено в финансисто
 
         Uri newUri = getContentResolver().insert(SMSBASE_URI, cv);
         Log.d(LOG_TAG, "insert, result Uri : " + newUri.toString());
 
-
-
         Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
-
     }
 
     public void onClick4(View v)
@@ -76,7 +74,8 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             String time = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.TIME));
             String spendmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.SPENDMON));
             String restmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.RESTMON));
-            Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon);
+            String isinfin = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.ISINFIN));
+            Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon + " " + isinfin);
         }
         cursor.close();
 
