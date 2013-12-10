@@ -21,7 +21,7 @@ import android.widget.Toast;
  * To change this template use File | Settings | File Templates.
  */
 public class SmsService extends Service {
-    CommonFunctions commonFunctions = new CommonFunctions();
+    CommonFunctions commonFunctions = new CommonFunctions(null,null);
 
     @Override
     public IBinder onBind(Intent intent) {

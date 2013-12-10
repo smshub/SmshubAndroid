@@ -2,11 +2,14 @@ package com.donhuan.SmshubAndroid;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
- import android.net.Uri;
 
 import java.io.*;
 import java.util.Collections;
@@ -14,12 +17,13 @@ import java.util.Vector;
 
 public class MyActivity extends Activity implements OnCheckedChangeListener {
     private static final String exMessages[] = new String[10];
-    String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
+    String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, MAGAZIN остаток 5200.50р.";
     String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
     String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Произведена покупка на сумму 2500.00 руб. в Карусель успешно. Доступно: 10500.00 руб.";
     String EXAMPLE_TEST4 = "MasterCard 9999 24.11.2013 23:43 Совершена покупка на сумму 4500.00 руб. в Карусель успешно. Доступно: 1000.00 руб.";
 
-    CommonFunctions commonFunctions = new CommonFunctions();
+    CommonFunctions commonFunctions = new CommonFunctions(null, null);
+
     ListView smsListView;
     ToggleButton toogleButton;
     Vector<String> smsVector = new Vector<String>(0);
@@ -44,20 +48,17 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     //Send data button
-    public void onClick3 (View v) {
+    public void onClick3(View v) {
 
-        CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(),SMSBASE_URI);
-        commonFunctions.putInfoToDB("bank","bank","store","date","time","smon","rmon");
+        CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(), SMSBASE_URI);
+        commonFunctions.putInfoToDB("bank", "bank", "store", "date", "time", "smon", "rmon");
 
         Toast.makeText(this, "Woohooo", Toast.LENGTH_LONG).show();
     }
 
-    public void onClick4(View v)
-    {
-
-
+    public void onClick4(View v) {
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
-        while (cursor.moveToNext()){
+        while (cursor.moveToNext()) {
             int id = cursor.getInt(cursor.getColumnIndex(SMSDataBaseProvider.SMSDATA_ID));
             String bankname = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
             String banknum = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNUM));
@@ -70,7 +71,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon + " " + isinfin);
         }
         cursor.close();
-
     }
 
     protected void onResume() {
@@ -118,7 +118,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     /*
     * Метод позволяет реагировать на нажатие по ListView
-    * */
+    */
     AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -129,21 +129,12 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         }
     };
 
-// Button-3
-    //public void onClick3(View v) {
-
     public void onClick1(View v) {
         String items[] = commonFunctions.scanMessage(EXAMPLE_TEST1);                                                    // вызвращает вектор стрингов с распознанными значениями
         Collections.addAll(smsVector, items);
-//        Toast.makeText(this, smsVector.get(0), Toast.LENGTH_LONG).show();
-    //}
-
-    private void scanTestMessage(String message) {
-        String smsTexts[];                                                                                              //Список для записи в него сообщений
-
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, smsVector));
-
     }
+
 
     public void writeFile(String titleText, String filename) {
         try {

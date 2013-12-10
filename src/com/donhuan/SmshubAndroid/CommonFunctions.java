@@ -19,16 +19,18 @@ public class CommonFunctions {
     Uri SMSBASE_URI;
     String LOG_TAG = "CommonFunctions";
 
-
-    CommonFunctions (ContentResolver contentResolver, Uri SMSBASE_URI)
-    {
+    /*
+    * Передача данных в конструктор
+    */
+    CommonFunctions(ContentResolver contentResolver, Uri SMSBASE_URI) {
         this.contentResolver = contentResolver;
         this.SMSBASE_URI = SMSBASE_URI;
     }
 
-
-    public void putInfoToDB (String BANKNAME, String BANKNUM, String STORENAME, String DATE, String TIME, String SPENDMON, String RESTMON)
-    {
+    /*
+    * Запись данных в бд
+    */
+    public void putInfoToDB(String BANKNAME, String BANKNUM, String STORENAME, String DATE, String TIME, String SPENDMON, String RESTMON) {
         SMSDataBaseProvider sqh = new SMSDataBaseProvider();
         //---- Работа с базой данных
         ContentValues cv = new ContentValues();
@@ -54,7 +56,7 @@ public class CommonFunctions {
     * Поэтому используются флаги.
     *
     * message   - текст сообщения
-    * */
+    */
     public String[] scanMessage(String message) {
         String[] items = {"", "", "", "", "", "", ""};
 
@@ -124,7 +126,7 @@ public class CommonFunctions {
 
     /*
     * Если все распознанно, то пишем обновляем detectedItems, иначе делаем пустым
-    * */
+    */
     private String[] updateDetectedItems(String[] items, boolean[] list) {
         String[] returnItems = new String[0];
         for (boolean aList : list) {
@@ -136,7 +138,7 @@ public class CommonFunctions {
 
     /*
     * Функция обрезает возможные символы с конца строки
-    * */
+    */
     String dropItem(String item) {
         for (int i = item.length(); i > 0; i--) {
             try {
