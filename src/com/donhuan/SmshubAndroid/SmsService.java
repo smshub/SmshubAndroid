@@ -8,10 +8,13 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.telephony.gsm.SmsMessage;
 import android.widget.Toast;
+
+import java.util.Vector;
 
 /**
  * Created with IntelliJ IDEA.
@@ -21,7 +24,12 @@ import android.widget.Toast;
  * To change this template use File | Settings | File Templates.
  */
 public class SmsService extends Service {
+
     CommonFunctions commonFunctions = new CommonFunctions(null,null);
+    Vector<String> smsVector = new Vector<String>(0);
+
+    final Uri SMSBASE_URI = Uri.parse("content://com.donhuan.SmshubAndroid.SMSDataBaseProvider/smsdata");
+    final String LOG_TAG = "MyLogs";
 
     @Override
     public IBinder onBind(Intent intent) {
@@ -46,16 +54,13 @@ public class SmsService extends Service {
                     str += msgs[i].getMessageBody();
                     str += "\n";
                 }
-                String items[] = commonFunctions.scanMessage(str);                          // вызвращает вектор стрингов с распознанными значениями
 
-                if (items.length == 7) {
-                    String smsText = "";
-                    for (String item : items) smsText += item + "\n";
-//                    writeFile(readFile("sms_texts.txt") + smsText, "sms_texts.txt");        //добавляем в файл!!!!!проверить!!!!!
-//                    writeFile(readFile("sms_addrs.txt") + addr + "\n", "sms_addrs.txt");        //добавляем в файл!!!!!проверить!!!!!
+                CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(), SMSBASE_URI);
+                String items[] = commonFunctions.scanMessage(str);                                                      // вызвращает вектор стрингов с распознанными значениями
+                if(items.length == 7) {
+                    commonFunctions.putInfoToDB(items[0], items[1], items[5], items[2], items[3], items[4], items[6]);  //Должна быть запись в БД
                 }
             }
-
         }
     };
 

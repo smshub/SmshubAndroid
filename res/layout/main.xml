@@ -17,21 +17,16 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Send Data"
+                android:text="Очистить"
                 android:id="@+id/button" android:onClick="onClick3"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Read Data"
+                android:text="Обновить"
                 android:id="@+id/button1" android:onClick="onClick4"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Test Parse"
-                android:id="@+id/button2" android:onClick="onClick1"/>
     </LinearLayout>
     <ListView
             android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:id="@+id/listView" android:layout_gravity="left|center_vertical"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/listView"/>
 </LinearLayout>
