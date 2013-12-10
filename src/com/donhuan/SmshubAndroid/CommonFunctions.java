@@ -6,6 +6,9 @@ import android.content.ContentValues;
 import android.net.Uri;
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dh
@@ -67,7 +70,7 @@ public class CommonFunctions {
             String word = splitString[i].toLowerCase();
 
             String regexpMonth =
-                    "(янв\\w*" +
+                    "|янв\\w*" +
                             "|фев\\w*" +
                             "|м\\w?рт\\w?" +
                             "|апр\\w*" +
@@ -76,8 +79,14 @@ public class CommonFunctions {
                             "|июл\\w?" +
                             "|авг\\w*" +
                             "|сен\\w*" +
+                            "|ок\\w{2}?бр\\w?" +
                             "|н\\w{2}?бр\\w?" +
-                            "|дек\\w*)";
+                            "|дек\\w*";
+
+            String regexpMonths[] = {
+                    "(янв\\w*)", "(фев\\w*)", "(м\\w?рт\\w?)", "(апр\\w*)", "(ма\\w?)", "(июн\\w?)",
+                    "(июл\\w?)", "(авг\\w*)", "(сен\\w*)", "(ок\\w{2}?бр\\w?)", "(н\\w{2}?бр\\w?)", "(дек\\w*)"
+            };
 
             if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //роверка на банк
                 items[0] = splitString[i];
@@ -87,17 +96,28 @@ public class CommonFunctions {
                 items[1] = splitString[i];
                 list[1] = true;
             } else if (word.matches("\\d{1,2}(" + regexpMonth + "|(\\.)\\d{2}((\\.)\\d{2,4})?)") && !list[2]) {             //Проверка на дату формата 1       (слитного)
-                items[2] = splitString[i];
+                //                items[2] = splitString[i];
+                Date d = new Date();
+                SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy");                                              //Пишем дату настоящего времени
+                items[2] = format1.format(d);
+
                 list[2] = true;
             } else if (word.matches(regexpMonth) && splitString[i - 1].matches("\\d{1,2}") && !list[2]) {                   //Проверка на дату формата 2       (раздельного)
                 String yy = "";
                 if (splitString[i + 1].matches("\\d{2,4}?")) {
                     yy = splitString[i + 1];
                 }
-                items[2] = splitString[i - 1] + " " + splitString[i] + " " + yy;
+                //items[2] = splitString[i - 1] + " " + splitString[i] + " " + yy;
+
+                Date d = new Date();
+                SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+                items[2] = format.format(d);                                                                                //Пишем дату настоящего времени
                 list[2] = true;
             } else if (word.matches("\\d{1,2}(:|,|(\\.))\\d{2}") && !list[3]) {                                              //Проверка на время
-                items[3] = word;
+                //items[3] = word;
+                Date d = new Date();
+                SimpleDateFormat format = new SimpleDateFormat("hh:mm");                                                    //Текущее время
+                items[3] = format.format(d);
                 list[3] = true;
             } else if (word.matches("\\d+([._,]\\d*)?\\w*((\\.)|,)?") && list[0] && list[1] && list[2] && list[3]) {         //Проверка на суммы  (олько если до этого нашли номер, банк , дату и время)
 
