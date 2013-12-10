@@ -10,7 +10,6 @@ package com.donhuan.SmshubAndroid;
 public class CommonFunctions {
 
 
-
     /*
     * Функция сканирования сообщения.
     *
@@ -20,8 +19,8 @@ public class CommonFunctions {
     *
     * message   - текст сообщения
     * */
-    public String [] scanMessage(String message) {
-        String[] items = new String[7];
+    public String[] scanMessage(String message) {
+        String[] items = {"", "", "", "", "", "", ""};
 
         String[] splitString = (message.split("\\s+"));
         boolean[] list = new boolean[7];                                                                                //Банк, номер, дата, время, оплата, магазин, остаток
@@ -46,6 +45,7 @@ public class CommonFunctions {
                 items[0] = splitString[i];
                 list[0] = true;
             } else if (word.matches("\\d+.?") && !list[1]) {                                                                //Проверка на номер
+                splitString[i] = dropItem(splitString[i]);
                 items[1] = splitString[i];
                 list[1] = true;
             } else if (word.matches("\\d{1,2}(" + regexpMonth + "|(\\.)\\d{2}((\\.)\\d{2,4})?)") && !list[2]) {             //Проверка на дату формата 1       (слитного)
@@ -64,10 +64,12 @@ public class CommonFunctions {
             } else if (word.matches("\\d+([._,]\\d*)?\\w*((\\.)|,)?") && list[0] && list[1] && list[2] && list[3]) {         //Проверка на суммы  (олько если до этого нашли номер, банк , дату и время)
 
                 if (countAmounts == 0) {    //если мы нашли сумму второй раз - это сумма остатка, иначе все плохо
+                    word = dropItem(word);
                     items[4] = word;
                     list[4] = true;
                 } else if (countAmounts == 1) {
-                    items[6] = splitString[i];
+                    word = dropItem(word);
+                    items[6] = word;
                     list[6] = true;
                 } else {
                     list[4] = false;
@@ -75,8 +77,10 @@ public class CommonFunctions {
                 }
                 countAmounts++;
 
+            } else if (splitString[i].matches("[A-Z]+") && list[0] && list[1] && list[2] && list[3]) {                       //Проверка на магазин
+                items[5] += word + " ";
+                list[5] = true;
             }
-            list[5] = true;                                                                                                 //Должна быть проверка на магазин
         }
         items = updateDetectedItems(items, list);
         return items;
@@ -89,11 +93,23 @@ public class CommonFunctions {
         String[] returnItems = new String[0];
         for (boolean aList : list) {
             if (!aList) returnItems = new String[1];
-            else returnItems =  items;
+            else returnItems = items;
         }
         return returnItems;
     }
 
-
-
+    /*
+    * Функция обрезает возможные символы с конца строки
+    * */
+    String dropItem(String item) {
+        for (int i = item.length(); i > 0; i--) {
+            try {
+                item = item.substring(0, i);
+                Double.parseDouble(item);
+                return item;
+            } catch (Exception ignore) {
+            }
+        }
+        return item;
+    }
 }

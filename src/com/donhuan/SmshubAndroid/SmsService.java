@@ -13,8 +13,6 @@ import android.os.IBinder;
 import android.telephony.gsm.SmsMessage;
 import android.widget.Toast;
 
-import java.io.*;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Dh
@@ -53,44 +51,13 @@ public class SmsService extends Service {
                 if (items.length == 7) {
                     String smsText = "";
                     for (String item : items) smsText += item + "\n";
-                    writeFile(readFile("sms_texts.txt") + smsText, "sms_texts.txt");        //добавляем в файл!!!!!проверить!!!!!
-                    writeFile(readFile("sms_addrs.txt") + addr + "\n", "sms_addrs.txt");        //добавляем в файл!!!!!проверить!!!!!
+//                    writeFile(readFile("sms_texts.txt") + smsText, "sms_texts.txt");        //добавляем в файл!!!!!проверить!!!!!
+//                    writeFile(readFile("sms_addrs.txt") + addr + "\n", "sms_addrs.txt");        //добавляем в файл!!!!!проверить!!!!!
                 }
             }
 
         }
     };
-
-    private void writeFile(String titleText, String filename) {
-        try {
-            // отрываем поток для записи
-            BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput(filename, MODE_PRIVATE)));
-            // пишем данные
-            bw.write(titleText);
-            // закрываем поток
-            bw.close();
-        } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
-    private String readFile(String filename) {
-        String text = "";
-        try {
-            // открываем поток для чтения
-            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput(filename)));
-            String str;
-            // читаем содержимое
-            while ((str = br.readLine()) != null) {
-                text += str + "\n";
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return text;
-    }
 
 
     @Override

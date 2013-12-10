@@ -3,21 +3,23 @@ package com.donhuan.SmshubAndroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.CompoundButton;
+import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.ListView;
-import android.widget.ToggleButton;
 
 import java.io.*;
+import java.util.Collections;
+import java.util.Vector;
 
 public class MyActivity extends Activity implements OnCheckedChangeListener {
-    public static final String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, остаток 5200.50р.";
-    public static final String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500.00 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
+    public static final String EXAMPLE_TEST1 = "ЗСКБ 9876 11 января 2013 13:02 оплата 500р, MAGAZIN остаток 5200.50р.";
+    public static final String EXAMPLE_TEST2 = "VISA 8339: 31.10 09:11 покупка на сумму 500 руб. PIZZA HUT PETROGRADSKAYA выполненна успешно. Доступно: 3417.83 руб.";
 
+    CommonFunctions commonFunctions = new CommonFunctions();
     ListView smsListView;
     ToggleButton toogleButton;
+    Vector<String> smsVector = new Vector<String>(0);
     boolean state;
 
     @Override
@@ -27,6 +29,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         toogleButton = (ToggleButton) findViewById(R.id.toggleButton1);
         smsListView = (ListView) findViewById(R.id.listView);
         toogleButton.setOnCheckedChangeListener(this);
+        smsListView.setOnItemClickListener(itemListener);
     }
 
     protected void onResume() {
@@ -37,23 +40,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     }
 
-    private String readFile(String filename) {
-        String text = "";
-        try {
-            // открываем поток для чтения
-            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput(filename)));
-            String str;
-            // читаем содержимое
-            while ((str = br.readLine()) != null) {
-                text += str + "\n";
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return text;
-    }
 
     protected void onPause() {
         if (state) writeFile("0", "is_active");
@@ -73,65 +59,46 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     /*
-    * Поиск нужного формата с использованием регулярных выражений,
-    * но с условием того, что порядок входных данных строго фиксирован.
-    * Поэтому используются флаги.
+    * Метод позволяет реагировать на нажатие по ListView
     * */
+    AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+            //Обработка нажатия на меню
+            Toast toast = Toast.makeText(getApplicationContext(), smsVector.get(position), 10000);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }
+    };
+
+
     public void onClick1(View v) {
-        scanTestMessage(EXAMPLE_TEST1);
+        String items[] = commonFunctions.scanMessage(EXAMPLE_TEST1);                                                    // вызвращает вектор стрингов с распознанными значениями
+        Collections.addAll(smsVector, items);
+//        Toast.makeText(this, smsVector.get(0), Toast.LENGTH_LONG).show();
+
+        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_expandable_list_item_1, smsVector));
+
     }
 
-    private void scanTestMessage(String message) {
-        String smsTexts[];                                                                                              //Список для записи в него сообщений
-
-        smsTexts = new String[2];                                                                                       //Очищаем список
-        smsTexts[0] = message;
-
-        String[] splitString = (message.split("\\s+"));
-        boolean[] list = new boolean[7];                                                                                //Банк, номер, дата, время, оплата, магазин, остаток
-
-        for (int i = 0; i < splitString.length; i++) {
-            String word = splitString[i].toLowerCase();
-
-            String regexpMonth = "(" +
-                    "янв\\w*" +
-                    "|фев\\w*" +
-                    "|м\\w?рт\\w?" +
-                    "|апр\\w*" +
-                    "|ма\\w?" +
-                    "|июн\\w?" +
-                    "|июл\\w?" +
-                    "|авг\\w*" +
-                    "|сен\\w*" +
-                    "|н\\w{2}?бр\\w?" +
-                    "|дек\\w*)";
-
-            if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //Проверка на банк
-                smsTexts[1] = word + "\tбанк\n";
-                list[0] = true;
-            } else if (word.matches("\\d+.?") && !list[1]) {                                                                //Проверка на номер
-                smsTexts[1] += word + "\tномер\n";
-                list[1] = true;
-            } else if (word.matches("\\d{1,2}(" + regexpMonth + "|(\\.)\\d{2}((\\.)\\d{2,4})?)") && !list[2]) {             //Проверка на дату формата 1       (слитного)
-                smsTexts[1] += word + "\tдата\n";
-                list[2] = true;
-            } else if (word.matches(regexpMonth) && splitString[i - 1].matches("\\d{1,2}") && !list[2]) {                   //Проверка на дату формата 2       (раздельного)
-                String yy = "";
-                if (splitString[i + 1].matches("\\d{2,4}?")) {
-                    yy = splitString[i + 1];
-                }
-                smsTexts[1] += splitString[i - 1] + " " + word + " " + yy + "\tдата\n";
-                list[2] = true;
-            } else if (word.matches("\\d{1,2}(:|,|(\\.))\\d{2}") && !list[3]) {                                              //Проверка на время
-                smsTexts[1] += word + "\tвремя\n";
-                list[3] = true;
-            } else if (word.matches("\\d+((\\.|,)\\d*)?\\w*((\\.)|,)?") && list[0] && list[1] && list[2] && list[3]) {         //Проверка на суммы  (олько если до этого нашли номер, банк , дату и время)
-                smsTexts[1] += word + " сумма\n";
+    private String readFile(String filename) {
+        String text = "";
+        try {
+            // открываем поток для чтения
+            BufferedReader br = new BufferedReader(new InputStreamReader(openFileInput(filename)));
+            String str;
+            // читаем содержимое
+            while ((str = br.readLine()) != null) {
+                text += str + "\n";
             }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
 
-        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, smsTexts));
+        return text;
     }
 
     public void writeFile(String titleText, String filename) {
