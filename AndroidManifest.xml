@@ -14,6 +14,11 @@
             </intent-filter>
         </activity>
         <service android:enabled="true" android:name=".SmsService" />
+        <provider
+                android:exported="true"
+                android:name=".SMSDataBaseProvider"
+                android:authorities="com.donhuan.SmshubAndroid.SMSDataBaseProvider" >
+        </provider>
     </application>
     <uses-permission android:name="android.permission.RECEIVE_SMS">
     </uses-permission>
