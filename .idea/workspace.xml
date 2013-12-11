@@ -7,10 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302c46c2-63f8-467f-bcda-9cd9f17fdbe7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/com/donhuan/SmshubAndroid/BuildConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SmshubAndroid.iml" afterPath="$PROJECT_DIR$/SmshubAndroid.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/main.xml" afterPath="$PROJECT_DIR$/res/layout/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -78,7 +75,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="36" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.14334472" vertical-offset="392" max-vertical-offset="3468">
+            <state line="19" column="97" selection-start="559" selection-end="628" vertical-scroll-proportion="0.1450512" vertical-offset="0" max-vertical-offset="3536">
               <folding />
             </state>
           </provider>
@@ -256,6 +253,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteToolWindowManager.SHOW" value="false" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="4df178ec7de3af55" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="test3" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunManager" selected="Android Application.MyActivity">
     <configuration default="false" name="MyActivity" type="AndroidRunConfigurationType" factoryName="Android Application" temporary="true">
@@ -426,6 +424,11 @@
       <created>1386748183093</created>
       <updated>1386748183093</updated>
     </task>
+    <task id="LOCAL-00001" summary="Добавлен экспорт в QIF&#10;">
+      <created>1386749447216</created>
+      <updated>1386749447216</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -471,6 +474,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Добавлен экспорт в QIF&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлен экспорт в QIF&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -516,7 +521,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="36" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.14334472" vertical-offset="392" max-vertical-offset="3468">
+        <state line="19" column="97" selection-start="559" selection-end="628" vertical-scroll-proportion="0.1450512" vertical-offset="0" max-vertical-offset="3536">
           <folding />
         </state>
       </provider>

@@ -50,6 +50,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     public void onClick4(View v) {
+        updateList();
+    }
+
+    private void updateList() {
         smsVector = new Vector<String>(0);
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
         while (cursor.moveToNext()) {
@@ -64,7 +68,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             String isinfin = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.ISINFIN));                      //флаги
             Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon + " " + isinfin);
 
-
             String smsTitle = date + " / " + time + "; " + "(" + bankname + ") " + storename;
             smsVector.add(smsTitle);
         }
@@ -78,6 +81,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         int i = readFile("is_active").length();
         if (i == 2) toogleButton.setChecked(true);
         else toogleButton.setChecked(false);
+        updateList();
 
     }
 
