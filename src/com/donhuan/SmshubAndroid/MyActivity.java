@@ -1,10 +1,12 @@
 package com.donhuan.SmshubAndroid;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -44,7 +46,12 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     //Send data button
     public void onClick3(View v) {
         CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(), SMSBASE_URI);
-        commonFunctions.putInfoToDB("bank", "banknum", "store", "date", "time", "smon", "rmon");
+        commonFunctions.putInfoToDB("bank", "banknum", "store", "date", "time", "555.00", "rmon");
+        commonFunctions.putInfoToDB("bank", "banknum", "KFC", "date", "time", "-4.00", "rmon");
+        commonFunctions.putInfoToDB("bank", "banknum", "MCdonalds", "date", "time", "87.00", "rmon");
+
+        Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
+        writeQIF(getApplicationContext(),cursor); //Экспорт в QIF
     }
 
     public void onClick4(View v) {
@@ -132,14 +139,82 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         try {
             // отрываем поток для записи
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(openFileOutput(filename, MODE_PRIVATE)));
+
             // пишем данные
             bw.write(titleText);
             // закрываем поток
             bw.close();
         } catch (IOException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+            e.printStackTrace();
         }
     }
 
+    //Экспорт в QIF
+    public void writeQIF(Context context,Cursor cursor)
+    {
+        // Проверка доступности и возможности записи на карту памяти
+        if (!Environment.MEDIA_MOUNTED.equals
+                (Environment.getExternalStorageState())) {
+            // если карта памяти не доступна
+            Toast.makeText(getApplicationContext(),
+                    "Карта памяти не доступна", Toast.LENGTH_LONG).show();
+            //  прекратим выполнение кода
+            return;
+        }
+
+        // создади переменную, которая будет хранить
+        // адрес текстового файла
+        File file = new File(
+                Environment.getExternalStorageDirectory(),
+                "/Financisto/file.qif");
+
+        // если папка Folder не существует,
+        // то создадим её командой mkdirs()
+        file.getParentFile().mkdirs();
+
+        // создади переменную для записи создания и наполнения файла
+        FileWriter writer = null;
+        try {
+            writer = new FileWriter(file);
+        } catch (IOException e) {
+            // если возникнет ошибка, то добавим её описание в Log
+            Log.e("MyError", "Не создался writer", e);
+        }
+        // запишем в файл пару строк
+        String newLine = "\r\n";
+        try {
+            writer.write("!Account" + newLine);//bankname
+            writer.append("NSMSAccount" + newLine);
+            writer.append("TCash" + newLine);
+            writer.append("^" + newLine);
+
+            writer.append("!Type:Cash" + newLine);
+            writer.append("D11/12/2013" + newLine);
+            writer.append("T0.00" + newLine);
+            writer.append("Начальный баланс (SMSAccount)" + newLine);
+            writer.append("^" + newLine);
+
+            while (cursor.moveToNext()) {
+                writer.append("D10/12/2013" + newLine); //date
+                String spendmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.SPENDMON));
+                writer.append("T" + spendmon + newLine);
+                String storename = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.STORENAME));
+                writer.append("P" + storename + newLine);
+                writer.append("^" + newLine);
+
+                //String bankname = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
+                //String date = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.DATE));
+            }
+            cursor.close();
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            // если возникнет ошибка, то добавим её описание в Log
+            Log.e("MyError", "Не записываются строки", e);
+        }
+
+        Toast.makeText(getApplicationContext(),
+                "Текстовый файл записан", Toast.LENGTH_LONG).show();
+    }
 
 }
