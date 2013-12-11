@@ -45,11 +45,6 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     //Send data button
     public void onClick3(View v) {
-        CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(), SMSBASE_URI);
-        commonFunctions.putInfoToDB("bank", "banknum", "store", "date", "time", "555.00", "rmon");
-        commonFunctions.putInfoToDB("bank", "banknum", "KFC", "date", "time", "-4.00", "rmon");
-        commonFunctions.putInfoToDB("bank", "banknum", "MCdonalds", "date", "time", "87.00", "rmon");
-
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
         writeQIF(getApplicationContext(),cursor); //Экспорт в QIF
     }

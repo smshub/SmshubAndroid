@@ -4,26 +4,31 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+    <ToggleButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="New ToggleButton"
+            android:id="@+id/toggleButton1"
+            android:textOff="Экран sms отключен" android:textOn="Экран sms включен"
+            android:layout_marginTop="-8dp" android:longClickable="false"/>
     <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Очистить"
+                android:text="Экспорт в Financisto"
                 android:id="@+id/button" android:onClick="onClick3"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Обновить"
                 android:id="@+id/button1" android:onClick="onClick4"/>
-        <ToggleButton
+        <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="New ToggleButton"
-                android:id="@+id/toggleButton1"
-                android:textOff="Экран sms отключен" android:textOn="Экран sms включен"
-                android:layout_marginTop="-8dp" android:longClickable="false"/>
+                android:text="Очистка"
+                android:id="@+id/button2" android:enabled="true"/>
     </LinearLayout>
     <ListView
             android:layout_width="wrap_content"
