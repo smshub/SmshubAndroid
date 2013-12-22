@@ -21,7 +21,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Proizvedena pokupka na summu 2500.00 rub. v KARUSEL uspeshno. Dostupno: 1000500.00 rub";
     String EXAMPLE_TEST4 = "MasterCard 9999 24.11.2013 23:43 Совершена покупка на сумму 4500.00 руб. в KARUSEL успешно. Доступно: 1000.00 руб.";
 
-    Vector<Integer> delId;
+    boolean delId[];
     ListView smsListView;
     ToggleButton toogleButton;
     Vector<String> smsVector = new Vector<String>(0);
@@ -58,13 +58,12 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     public void onClickDel(View v) {
-
-        for (int i = 0; i < smsVector.size(); i++) {
-
-
+        for (int i = 0; i < delId.length; i++) {
+            if (delId[i]) {
+                smsVector.remove(i);
+            }
         }
-        delId = new Vector<Integer>(0);
-
+        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
     }
 
 
@@ -89,6 +88,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         }
         cursor.close();
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
+        delId = new boolean[smsVector.size()];
     }
 
     protected void onResume() {
@@ -145,6 +145,8 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
             CheckedTextView check = (CheckedTextView) v;
             check.setChecked(!check.isChecked());
+            if (check.isChecked()) delId[position] = true;
+            else delId[position] = false;
         }
 
     };
