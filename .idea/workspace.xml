@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302c46c2-63f8-467f-bcda-9cd9f17fdbe7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -75,7 +74,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="27" selection-start="2717" selection-end="2717" vertical-scroll-proportion="3.1126761" vertical-offset="102" max-vertical-offset="4080">
+            <state line="19" column="102" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6225352" vertical-offset="102" max-vertical-offset="4080">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1163#1171#0" expanded="true" />
@@ -468,7 +467,11 @@
       <created>1387726333552</created>
       <updated>1387726333552</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлено удаление из списка ListView (не не из БД)&#10;">
+      <created>1387728516425</created>
+      <updated>1387728516425</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -518,7 +521,8 @@
     <MESSAGE value="Обновление списка смс при включении" />
     <MESSAGE value="Исправлен пример смс" />
     <MESSAGE value="Добавлено выделение в списке ListView" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлено выделение в списке ListView" />
+    <MESSAGE value="Добавлено удаление из списка ListView (не не из БД)&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлено удаление из списка ListView (не не из БД)&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -713,7 +717,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="27" selection-start="2717" selection-end="2717" vertical-scroll-proportion="3.1126761" vertical-offset="102" max-vertical-offset="4080">
+        <state line="19" column="102" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6225352" vertical-offset="102" max-vertical-offset="4080">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1163#1171#0" expanded="true" />
