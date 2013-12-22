@@ -21,10 +21,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Proizvedena pokupka na summu 2500.00 rub. v KARUSEL uspeshno. Dostupno: 1000500.00 rub";
     String EXAMPLE_TEST4 = "MasterCard 9999 24.11.2013 23:43 Совершена покупка на сумму 4500.00 руб. в KARUSEL успешно. Доступно: 1000.00 руб.";
 
-    boolean delId[];
     ListView smsListView;
     ToggleButton toogleButton;
     Vector<String> smsVector = new Vector<String>(0);
+    Vector<Boolean> del;
     boolean state;
     final Uri SMSBASE_URI = Uri.parse("content://com.donhuan.SmshubAndroid.SMSDataBaseProvider/smsdata");
     final String LOG_TAG = "MyLogs";
@@ -58,9 +58,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     public void onClickDel(View v) {
-        for (int i = 0; i < delId.length; i++) {
-            if (delId[i]) {
+        for (int i = 0; i < del.size(); i++) {
+            if (del.get(i)) {
                 smsVector.remove(i);
+                del.remove(i);
             }
         }
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
@@ -69,6 +70,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     private void updateList() {
         smsVector = new Vector<String>(0);
+        del = new Vector<Boolean>(0);
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
         while (cursor.moveToNext()) {
             int id = cursor.getInt(cursor.getColumnIndex(SMSDataBaseProvider.SMSDATA_ID));
@@ -85,10 +87,11 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
             String smsTitle = date + " / " + time + "; " + "(" + bankname + ") " + storename;
             smsVector.add(smsTitle);
+            del.add(false);
         }
         cursor.close();
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
-        delId = new boolean[smsVector.size()];
+        Toast.makeText(getApplicationContext(), String.valueOf(del.size()), Toast.LENGTH_LONG).show();
     }
 
     protected void onResume() {
@@ -145,8 +148,10 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
             CheckedTextView check = (CheckedTextView) v;
             check.setChecked(!check.isChecked());
-            if (check.isChecked()) delId[position] = true;
-            else delId[position] = false;
+            if (check.isChecked()) del.set(position, true);
+            else del.set(position, false);
+
+
         }
 
     };

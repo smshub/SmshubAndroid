@@ -7,6 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="302c46c2-63f8-467f-bcda-9cd9f17fdbe7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -74,12 +75,12 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="102" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6225352" vertical-offset="102" max-vertical-offset="4080">
+            <state line="139" column="24" selection-start="5651" selection-end="5651" vertical-scroll-proportion="0.29396325" vertical-offset="2251" max-vertical-offset="4165">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1163#1171#0" expanded="true" />
-                <element signature="e#5619#5989#0" expanded="true" />
-                <element signature="e#5981#5982#0" expanded="true" />
+                <element signature="e#1142#1150#0" expanded="true" />
+                <element signature="e#5776#6150#0" expanded="true" />
+                <element signature="e#6142#6143#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -471,7 +472,11 @@
       <created>1387728516425</created>
       <updated>1387728516425</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавлено удаление из списка ListView (не не из БД)&#10;">
+      <created>1387728598902</created>
+      <updated>1387728598902</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -537,9 +542,9 @@
         <state line="73" column="115" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="3587">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -573,9 +578,9 @@
         <state line="73" column="115" selection-start="3590" selection-end="3590" vertical-scroll-proportion="0.0" vertical-offset="1241" max-vertical-offset="3536">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -609,9 +614,9 @@
         <state line="42" column="92" selection-start="1865" selection-end="1865" vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="3587">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -645,9 +650,9 @@
         <state line="19" column="97" selection-start="559" selection-end="628" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="3536">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -667,9 +672,9 @@
         <state line="46" column="34" selection-start="1931" selection-end="1931" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3757">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,12 +722,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="102" selection-start="704" selection-end="704" vertical-scroll-proportion="0.6225352" vertical-offset="102" max-vertical-offset="4080">
+        <state line="139" column="24" selection-start="5651" selection-end="5651" vertical-scroll-proportion="0.29396325" vertical-offset="2251" max-vertical-offset="4165">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1163#1171#0" expanded="true" />
-            <element signature="e#5619#5989#0" expanded="true" />
-            <element signature="e#5981#5982#0" expanded="true" />
+            <element signature="e#1142#1150#0" expanded="true" />
+            <element signature="e#5776#6150#0" expanded="true" />
+            <element signature="e#6142#6143#0" expanded="true" />
           </folding>
         </state>
       </provider>
