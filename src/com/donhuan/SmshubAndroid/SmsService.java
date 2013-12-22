@@ -58,7 +58,7 @@ public class SmsService extends Service {
                 CommonFunctions commonFunctions = new CommonFunctions(getContentResolver(), SMSBASE_URI);
                 String items[] = commonFunctions.scanMessage(str);                                                      // вызвращает вектор стрингов с распознанными значениями
                 if(items.length == 7) {
-                    commonFunctions.putInfoToDB(items[0], items[1], items[5], items[2], items[3], items[4], items[6]);  //Должна быть запись в БД
+                    commonFunctions.putInfoToDB(items[0], items[1], items[5], items[2], items[3], items[4], items[6]);  //запись в БД
                 }
             }
         }

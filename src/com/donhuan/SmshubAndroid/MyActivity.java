@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
 import android.widget.CompoundButton.OnCheckedChangeListener;
@@ -22,6 +21,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     String EXAMPLE_TEST3 = "AlphaBank 5454 23.11.2013 16:13 Proizvedena pokupka na summu 2500.00 rub. v KARUSEL uspeshno. Dostupno: 1000500.00 rub";
     String EXAMPLE_TEST4 = "MasterCard 9999 24.11.2013 23:43 Совершена покупка на сумму 4500.00 руб. в KARUSEL успешно. Доступно: 1000.00 руб.";
 
+    Vector<Integer> delId;
     ListView smsListView;
     ToggleButton toogleButton;
     Vector<String> smsVector = new Vector<String>(0);
@@ -46,12 +46,27 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     //Send data button
     public void onClick3(View v) {
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
-        writeQIF(getApplicationContext(),cursor); //Экспорт в QIF
+        writeQIF(getApplicationContext(), cursor); //Экспорт в QIF
     }
 
     public void onClick4(View v) {
         updateList();
     }
+
+    public void onClickTest(View v) {
+        commonFunctions.putInfoToDB("System", "0000", "contora", "22.12.13", "17:39", "1000", "10000");  //запись в БД
+    }
+
+    public void onClickDel(View v) {
+
+        for (int i = 0; i < smsVector.size(); i++) {
+
+
+        }
+        delId = new Vector<Integer>(0);
+
+    }
+
 
     private void updateList() {
         smsVector = new Vector<String>(0);
@@ -66,13 +81,14 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             String spendmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.SPENDMON));
             String restmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.RESTMON));
             String isinfin = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.ISINFIN));                      //флаги
+
             Log.i(LOG_TAG, id + " " + bankname + " " + banknum + " " + storename + " " + date + " " + time + " " + spendmon + " " + restmon + " " + isinfin);
 
             String smsTitle = date + " / " + time + "; " + "(" + bankname + ") " + storename;
             smsVector.add(smsTitle);
         }
         cursor.close();
-        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, smsVector));
+        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
     }
 
     protected void onResume() {
@@ -120,19 +136,18 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         }
     }
 
+
     /*
     * Метод позволяет реагировать на нажатие по ListView
     */
     AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-            //Обработка нажатия на меню
-            Toast toast = Toast.makeText(getApplicationContext(), smsVector.get(position), 10000);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
+            CheckedTextView check = (CheckedTextView) v;
+            check.setChecked(!check.isChecked());
         }
-    };
 
+    };
 
     public void writeFile(String titleText, String filename) {
         try {
@@ -149,8 +164,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     }
 
     //Экспорт в QIF
-    public void writeQIF(Context context,Cursor cursor)
-    {
+    public void writeQIF(Context context, Cursor cursor) {
         // Проверка доступности и возможности записи на карту памяти
         if (!Environment.MEDIA_MOUNTED.equals
                 (Environment.getExternalStorageState())) {
@@ -215,5 +229,4 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         Toast.makeText(getApplicationContext(),
                 "Текстовый файл записан", Toast.LENGTH_LONG).show();
     }
-
 }

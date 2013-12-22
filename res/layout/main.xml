@@ -22,14 +22,19 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Обновить"
-                android:id="@+id/button1" android:onClick="onClick4"/>
+                android:text="Очистка"
+                android:id="@+id/button2" android:enabled="true" android:onClick="onClickDel"/>
         <Button
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="Очистка"
-                android:id="@+id/button2" android:enabled="true"/>
+                android:text="Test"
+                android:id="@+id/button3" android:onClick="onClickTest"/>
     </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Обновить"
+            android:id="@+id/button1" android:onClick="onClick4"/>
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
