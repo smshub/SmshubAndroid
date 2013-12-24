@@ -24,6 +24,7 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
     ListView smsListView;
     ToggleButton toogleButton;
     Vector<String> smsVector = new Vector<String>(0);
+    Vector<Integer> ids = new Vector<Integer>(0);
     Vector<Boolean> del;
     boolean state;
     final Uri SMSBASE_URI = Uri.parse("content://com.donhuan.SmshubAndroid.SMSDataBaseProvider/smsdata");
@@ -61,20 +62,20 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
     //Delete
     public void onClickDel(View v) {
-        for (int i = 0; i < del.size(); i++) {
+        for (int i = del.size() - 1; i >= 0; i--) {
             if (del.get(i)) {
-                smsVector.remove(i);
+                commonFunctions.deleteFromDB(ids.get(i));
                 del.remove(i);
+                ids.remove(i);
             }
         }
-        smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
-
-        commonFunctions.deleteFromDB(2);// Удаление из БД
+        updateList();
     }
 
 
     private void updateList() {
         smsVector = new Vector<String>(0);
+        ids = new  Vector<Integer>(0);
         del = new Vector<Boolean>(0);
         Cursor cursor = getContentResolver().query(SMSBASE_URI, null, null, null, null);
         while (cursor.moveToNext()) {
@@ -92,11 +93,11 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
             String smsTitle = date + " / " + time + "; " + "(" + bankname + ") " + storename;
             smsVector.add(smsTitle);
+            ids.add(id);
             del.add(false);
         }
         cursor.close();
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
-        Toast.makeText(getApplicationContext(), String.valueOf(del.size()), Toast.LENGTH_LONG).show();
     }
 
     protected void onResume() {

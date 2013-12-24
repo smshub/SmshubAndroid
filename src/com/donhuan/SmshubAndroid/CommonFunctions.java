@@ -88,7 +88,7 @@ public class CommonFunctions {
                     "(июл\\w?)", "(авг\\w*)", "(сен\\w*)", "(ок\\w{2}?бр\\w?)", "(н\\w{2}?бр\\w?)", "(дек\\w*)"
             };
 
-            if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //роверка на банк
+            if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //Gроверка на банк
                 items[0] = splitString[i];
                 list[0] = true;
             } else if (word.matches("\\d+.?") && !list[1]) {                                                                //Проверка на номер

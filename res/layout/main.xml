@@ -17,24 +17,20 @@
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Экспорт в Financisto"
+                android:text="Экспорт в\n Financisto"
                 android:id="@+id/button" android:onClick="onClick3"/>
         <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Очистка"
-                android:id="@+id/button2" android:enabled="true" android:onClick="onClickDel"/>
+                android:text="Обновить\n список"
+                android:id="@+id/button1" android:onClick="onClick4" android:longClickable="true"/>
         <Button
-                android:layout_width="fill_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Test"
-                android:id="@+id/button3" android:onClick="onClickTest"/>
+                android:text="Удалить\n отмченное"
+                android:id="@+id/button2" android:enabled="true" android:onClick="onClickDel"
+                />
     </LinearLayout>
-    <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Обновить"
-            android:id="@+id/button1" android:onClick="onClick4"/>
     <ListView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
