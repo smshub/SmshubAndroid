@@ -16,13 +16,6 @@ import android.widget.Toast;
 
 import java.util.Vector;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Dh
- * Date: 04.11.13
- * Time: 20:49
- * To change this template use File | Settings | File Templates.
- */
 public class SmsService extends Service {
 
     CommonFunctions commonFunctions = new CommonFunctions(null,null);

@@ -49,14 +49,17 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         writeQIF(getApplicationContext(), cursor); //Экспорт в QIF
     }
 
+    //Update
     public void onClick4(View v) {
         updateList();
     }
 
+    //Test
     public void onClickTest(View v) {
         commonFunctions.putInfoToDB("System", "0000", "contora", "22.12.13", "17:39", "1000", "10000");  //запись в БД
     }
 
+    //Delete
     public void onClickDel(View v) {
         for (int i = 0; i < del.size(); i++) {
             if (del.get(i)) {
@@ -65,6 +68,8 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
             }
         }
         smsListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, smsVector));
+
+        commonFunctions.deleteFromDB(2);// Удаление из БД
     }
 
 

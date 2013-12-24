@@ -1,7 +1,7 @@
 package com.donhuan.SmshubAndroid;
 
-
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.net.Uri;
 import android.util.Log;
@@ -9,13 +9,6 @@ import android.util.Log;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Dh
- * Date: 23.11.13
- * Time: 18:17
- * To change this template use File | Settings | File Templates.
- */
 public class CommonFunctions {
 
     ContentResolver contentResolver;
@@ -48,6 +41,13 @@ public class CommonFunctions {
 
         Uri newUri = contentResolver.insert(SMSBASE_URI, cv);
         Log.d(LOG_TAG, "insert, result Uri : " + newUri.toString());
+    }
+
+    public void deleteFromDB (int id)
+    {
+        Uri uri = ContentUris.withAppendedId(SMSBASE_URI, id);
+        contentResolver.delete(uri, null, null);
+        Log.d(LOG_TAG, "delete " + id);
     }
 
 
