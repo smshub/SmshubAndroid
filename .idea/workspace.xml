@@ -11,9 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d1c1607-9dcc-43e4-aa67-00e75fbe7eab" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/CommonFunctions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/donhuan/SmshubAndroid/MyActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SmshubAndroid.iws" />
@@ -137,6 +134,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master2" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -520,12 +522,17 @@
       <changelist id="0d1c1607-9dcc-43e4-aa67-00e75fbe7eab" name="Default" comment="" />
       <created>1387917995914</created>
       <updated>1387917995914</updated>
-      <workItem from="1387924984092" duration="8854000" />
+      <workItem from="1387924984092" duration="8934000" />
     </task>
+    <task id="LOCAL-00001" summary="Исправления в записи в QIF и чтении с большой буквы названия магазина">
+      <created>1387934680037</created>
+      <updated>1387934680037</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8854000" />
+    <option name="totallyTimeSpent" value="8934000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
@@ -573,6 +580,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Исправления в записи в QIF и чтении с большой буквы названия магазина" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправления в записи в QIF и чтении с большой буквы названия магазина" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
