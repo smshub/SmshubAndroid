@@ -209,27 +209,36 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
         // запишем в файл пару строк
         String newLine = "\r\n";
         try {
-            writer.write("!Account" + newLine);//bankname
-            writer.append("NSMSAccount" + newLine);
-            writer.append("TCash" + newLine);
-            writer.append("^" + newLine);
+            int bankNameFlag = 0;
+            String bankName = null;
+            while (cursor.moveToNext())
+            {
+                if (bankNameFlag == 0)
+                {
+                    bankName = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
+                    String num = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNUM));
 
-            writer.append("!Type:Cash" + newLine);
-            writer.append("D11/12/2013" + newLine);
-            writer.append("T0.00" + newLine);
-            writer.append("Начальный баланс (SMSAccount)" + newLine);
-            writer.append("^" + newLine);
+                    writer = printNewBank(writer, bankName + num);
+                    bankNameFlag = 1;
+                }
+                else
+                {
+                    String newBankName = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
+                    if (!newBankName.equals(bankName))
+                    {
+                        String num = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNUM));
+                        bankName = newBankName;
+                        writer = printNewBank(writer, bankName+num);
+                    }
+                }
 
-            while (cursor.moveToNext()) {
-                writer.append("D10/12/2013" + newLine); //date
+                String date = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.DATE));
+                writer.append("D" + date + newLine);
                 String spendmon = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.SPENDMON));
                 writer.append("T" + spendmon + newLine);
                 String storename = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.STORENAME));
                 writer.append("P" + storename + newLine);
                 writer.append("^" + newLine);
-
-                //String bankname = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.BANKNAME));
-                //String date = cursor.getString(cursor.getColumnIndex(SMSDataBaseProvider.DATE));
             }
             cursor.close();
             writer.flush();
@@ -241,5 +250,26 @@ public class MyActivity extends Activity implements OnCheckedChangeListener {
 
         Toast.makeText(getApplicationContext(),
                 "Текстовый файл записан", Toast.LENGTH_LONG).show();
+    }
+
+    FileWriter printNewBank(FileWriter writer, String bankname)
+    {
+        String newLine = "\r\n";
+        try {
+        writer.write("!Account" + newLine);//bankname
+
+        writer.append("N" + bankname + newLine);
+        writer.append("TCash" + newLine);
+        writer.append("^" + newLine);
+
+        writer.append("!Type:Cash" + newLine);
+        writer.append("D11/12/2013" + newLine);
+        writer.append("T0.00" + newLine);
+        writer.append("Начальный баланс (" +bankname +")" + newLine);
+        writer.append("^" + newLine);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return writer;
     }
 }

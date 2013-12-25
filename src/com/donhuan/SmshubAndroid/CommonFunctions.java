@@ -49,8 +49,6 @@ public class CommonFunctions {
         contentResolver.delete(uri, null, null);
         Log.d(LOG_TAG, "delete " + id);
     }
-
-
     /*
     * Функция сканирования сообщения.
     *
@@ -88,7 +86,7 @@ public class CommonFunctions {
                     "(июл\\w?)", "(авг\\w*)", "(сен\\w*)", "(ок\\w{2}?бр\\w?)", "(н\\w{2}?бр\\w?)", "(дек\\w*)"
             };
 
-            if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //Gроверка на банк
+            if (word.matches("[a-z]+|[а-я]+") && !list[0]) {                                                                //Проверка на банк
                 items[0] = splitString[i];
                 list[0] = true;
             } else if (word.matches("\\d+.?") && !list[1]) {                                                                //Проверка на номер
@@ -135,7 +133,7 @@ public class CommonFunctions {
                 }
                 countAmounts++;
 
-            } else if (splitString[i].matches("[A-Z]+") && list[0] && list[1] && list[2] && list[3] && list[4]) {                       //Проверка на магазин
+            } else if (splitString[i].matches("[A-Za-z]+") && list[0] && list[1] && list[2] && list[3] && list[4]) {                       //Проверка на магазин
                 items[5] += word + " ";
                 list[5] = true;
             }
